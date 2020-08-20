@@ -1,0 +1,65 @@
+@charset "utf-8";
+
+// If need, change your variables before importing Bulma
+$primary: #F18B15;
+
+$tabs-border-bottom-color: black;
+$navbar-item-color: white;
+$navbar-item-hover-color: $primary;
+$tabs-link-active-color: $primary;
+$tabs-toggle-link-hover-border-color: $primary;
+$tabs-link-color: white;
+$tabs-link-hover-color: $primary;
+$tabs-link-active-border-bottom-color: $primary;
+$tabs-link-hover-border-bottom-color: $primary;
+$box-padding: 0;
+
+@import "~bulma/bulma.sass";
+
+body, button, input, select, textarea {
+    font-family: inherit;
+}
+
+.globalplex-orange {
+    color: #F18B15;
+}
+
+@media screen and (max-width: 1023px) {
+    .navbar-menu {
+        background-color: $dark;
+    }
+}
+
+.navbar-item img {
+    margin-bottom: 0;
+    max-height: 2.2rem;
+}
+
+.navbar {
+    opacity: 0.9;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(241, 139, 21, 0.8);;
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    transition: .5s ease;
+  }
+
+  .card:hover .overlay {
+    height: 100%;
+  }
+
+  .vertical-center {
+    margin: 0;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
