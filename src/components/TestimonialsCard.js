@@ -6,7 +6,7 @@ const TestimonialsCard = (props) => (
       <figure className="image is-3by2">
         <img
           src="https://bulma.io/images/placeholders/1280x960.png"
-          alt="Profile image"
+          alt="Profile"
         />
       </figure>
     </div>
