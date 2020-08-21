@@ -1,9 +1,9 @@
 import React from "react";
 
 const ContentCard = (props) => (
-  <div class="card">
+  <div className="card">
     <div
-      class="card-image"
+      className="card-image"
       style={{
         backgroundPosition: "center",
         backgroundSize: "cover",
@@ -17,8 +17,8 @@ const ContentCard = (props) => (
         </div>
       </div>
     </div>
-    <div class="card-content">
-      <div class="content">
+    <div className="card-content">
+      <div className="content">
         <p className="subtitle">{props.subtitle}</p>
       </div>
     </div>

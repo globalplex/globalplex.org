@@ -5,7 +5,7 @@ const ValuesCard = (props) => (
     <div className="columns is-vcentered">
       <div className="column is-half">
         <div className="section">
-          {/* <figure class="image is-64x64">
+          {/* <figure className="image is-64x64">
                     <img src="https://bulma.io/images/placeholders/128x128.png" alt="Image" />
                     </figure> */}
           <h1 className="title has-text-centered has-text-primary">
@@ -14,7 +14,7 @@ const ValuesCard = (props) => (
         </div>
       </div>
       <div className="column" style={{ padding: 0 }}>
-        <div class="section">
+        <div className="section">
           <p>{props.subtitle}</p>
         </div>
       </div>

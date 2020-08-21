@@ -3,7 +3,7 @@ import React from "react";
 const ProfileCard = (props) => (
   <div className="columns">
     <div className="column is-3 is-6-mobile">
-      <figure class="image">
+      <figure className="image">
         <img src={props.img} alt="About Founders" />
       </figure>
     </div>
