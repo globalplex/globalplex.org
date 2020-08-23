@@ -1,93 +1,86 @@
 import React from "react";
+import { graphql } from "gatsby";
 import Layout from "../components/Layout";
-import Header from "../components/Header";
 import Container from "../components/Container";
 import "../pages/mystyles.scss";
 
-const Contact = () => {
+const ContactPage = ({ data }) => {
+  const { title, blurb, sampleQuestions } = data.markdownRemark.frontmatter;
+
   return (
     <Layout>
-      <Header
-        title="Contact Us"
-        subtitle="Drop us a line and schedule a consultation"
-        img="../img/contact-header.png"
-      />
+      <section style={{ paddingTop: "3rem" }}>
+        <div className="hero-body">
+          <div className="container">
+            <h1 className="title">{title}</h1>
+          </div>
+        </div>
+      </section>
       <Container>
         <section className="section">
-          <div class="content">
-            <div class="columns is-vcentered">
-              <div class="column is-7">
-                <p class="subtitle is-5 has-text-weight-semibold">
-                  We would love to talk and get to know you and your team!
-                </p>
-                <p>Leave your info and message below to get started</p>
+          <div className="content">
+            <div className="columns is-vcentered">
+              <div className="column is-7">
+                <p>{blurb}</p>
                 <br />
-                <div class="field">
-                  <label class="label">Name</label>
-                  <div class="control">
-                    <input class="input" type="text" placeholder="Your name" />
+                <div className="field">
+                  <label className="label">Name</label>
+                  <div className="control">
+                    <input
+                      className="input"
+                      type="text"
+                      placeholder="Your name"
+                    />
                   </div>
                 </div>
 
-                <div class="field">
-                  <label class="label">Email</label>
-                  <div class="control">
+                <div className="field">
+                  <label className="label">Email</label>
+                  <div className="control">
                     <input
-                      class="input"
+                      className="input"
                       type="email"
                       placeholder="Your email"
                     />
                   </div>
                 </div>
 
-                <div class="field">
-                  <label class="label">Company / Organization</label>
-                  <div class="control">
+                <div className="field">
+                  <label className="label">Company / Organization</label>
+                  <div className="control">
                     <input
-                      class="input"
+                      className="input"
                       type="text"
                       placeholder="Your organization"
                     />
                   </div>
                 </div>
 
-                <div class="field">
-                  <label class="label">Message</label>
-                  <div class="control">
+                <div className="field">
+                  <label className="label">Message</label>
+                  <div className="control">
                     <textarea
-                      class="textarea"
+                      className="textarea"
                       placeholder="Drop us a line!"
                     ></textarea>
                   </div>
                 </div>
 
-                <div class="field">
-                  <div class="control">
-                    <button class="button is-link">Submit</button>
+                <div className="field">
+                  <div className="control">
+                    <button className="button is-link">Submit</button>
                   </div>
                 </div>
               </div>
-              <div class="column is-1" />
-              <div class="column">
-                <div class="card">
-                  <div class="card-content">
-                    <h3 class="title">Some questions you could ask</h3>
+              <div className="column is-1" />
+              <div className="column">
+                <div className="card">
+                  <div className="card-content">
+                    <h3 className="title">{sampleQuestions.title}</h3>
                     <br />
-                    <p class="subtitle">
-                      What does a customized training look like for my
-                      organization's needs?
-                    </p>
-                    <p class="subtitle">
-                      How does a typical training session look like?
-                    </p>
-                    <p class="subtitle">
-                      What are you going to help me and my team discover and
-                      develop our potential?
-                    </p>
-                    <p class="subtitle">
-                      What curriculum or training would be covered for the
-                      various topics?
-                    </p>
+                    {sampleQuestions.questions.map((item) => (
+                      <p className="subtitle">{item}</p>
+                    ))}
                   </div>
                 </div>
               </div>
@@ -99,4 +92,24 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default ContactPage;
+
+export const query = graphql`
+  query ContactPage($path: String!) {
+    markdownRemark(frontmatter: { path: { eq: $path } }) {
+      frontmatter {
+        title
+        blurb
+        sampleQuestions {
+          title
+          questions
+        }
+        faqTitle
+        faq {
+          question
+          answer
+        }
+      }
+    }
+  }
+`;
