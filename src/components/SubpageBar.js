@@ -13,6 +13,9 @@ const SubpageBar = (props) => (
       <li>
         <a href={props.link3}>{props.tab3}</a>
       </li>
+      <li>
+        <a href={props.link4}>{props.tab4}</a>
+      </li>
     </ul>
   </div>
 );

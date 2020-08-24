@@ -1,8 +1,6 @@
 import React from "react";
 import { graphql, Link } from "gatsby";
 import Layout from "../components/Layout";
-import ContactSection from "../components/ContactSection";
-import "../pages/mystyles.scss";
 import TestimonialsCard from "../components/TestimonialsCard";
 import ContentCard from "../components/ContentCard";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -14,6 +12,7 @@ const IndexPage = ({ data }) => {
     services,
     approach,
     testimonials,
+    consult,
   } = data.markdownRemark.frontmatter;
 
   return (
@@ -62,7 +61,7 @@ const IndexPage = ({ data }) => {
             <div className="column is-half">
               {services.content.map((item) => (
                 <>
-                  <Link to="/services/">
+                  <Link to={item.link}>
                     <div className="box">
                       <div className="section" style={{ padding: "1.5rem" }}>
                         <div className="columns is-vcentered">
@@ -102,7 +101,7 @@ const IndexPage = ({ data }) => {
             {approach.content.map((item) => (
               <div className="column">
                 <ContentCard
-                  img="../img/testimonials-header.png"
+                  image={item.image}
                   title={item.title}
                   subtitle={item.description}
                 />
@@ -139,6 +138,7 @@ const IndexPage = ({ data }) => {
             {testimonials.content.map((item) => (
               <div className="column">
                 <TestimonialsCard
+                  image={item.image}
                   name={item.name}
                   title={item.title}
                   blurb={item.blurb}
@@ -166,7 +166,26 @@ const IndexPage = ({ data }) => {
         </div>
       </section>
 
-      <ContactSection />
+      <section className="section has-background-light">
+        <div class="container">
+          <div className="box has-background-dark">
+            <div className="section columns has-text-white is-vcentered is-medium">
+              <div className="column is-1" />
+              <div className="column is-6">
+                <h1 className="title is-1 has-text-white">{consult.title}</h1>
+                <p className="has-text-white">{consult.blurb}</p>
+              </div>
+              <div className="column has-text-centered">
+                <Link to={consult.callToActionLink}>
+                  <button className="button is-outlined is-primary is-medium has-text-weight-semibold">
+                    Contact Us
+                  </button>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </Layout>
   );
 };
@@ -215,6 +234,11 @@ export const query = graphql`
             description
           }
           callToAction
+          callToActionLink
+        }
+        consult {
+          title
+          blurb
           callToActionLink
         }
       }

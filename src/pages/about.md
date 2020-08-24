@@ -8,7 +8,16 @@ story:
   title: Our Story
   image: ../img/about-story.png
   description: >-
-    Globalplex began with a vision. Our two founders etc etc etc. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eu porttitor turpis. Quisque eget lectus metus. In tempus tempus augue, id feugiat neque sodales et. Aliquam vitae mauris non lectus lobortis venenatis. Donec sed arcu placerat, vulputate orci a, tempor metus. Praesent aliquet porta ligula, a porta nisl placerat eget. Quisque placerat imperdiet est vitae facilisis.
+    Today, we live in a very complex world. As we observe local and global events, we are on the precipice of challenging times. But yet, with the various adversities and obstacles, we are in the midst of some enormous and unimagined opportunities.  
+
+    This why Globalplex got started. Our mission is simple: to effectively equip people to excel in life and expand their influence. We believe that in the professional workplace sector of society, there needs to be a greater quality of training for organizations and their teams. In order to engage in today’s world markets and environments, we cannot simply rely on archaic methods of the past. There needs to be new and effective aptitudes and competencies, along with some of the classic skillsets, to prepare people to make a difference in the markets and to adapt to a changing world. Organizations and corporations cannot ignore the increasing need for better training, coaching, and mentoring or it will lose its competitive edge.
+
+    At Globalplex, we are passionate about helping organizations, both on a personal and corporate level, to reach their goals and to become more successful in making a significant impact in the world. Many organizations and corporations need help with their recent hires, whether it’s recent university graduates or people who are new to the workforce. This is where Globalplex’s training can assist and augment the organization’s values in order to achieve their objectives. 
+
+    We believe in a holistic approach to develop various skills and practices, which will benefit your desired aspirations. The training consists of soft skills, technical skills, and personal skills, which will help you to reach your full potential and maximize what you were destined to do. We can accomplish this by in-person and on-site training, as well as consultation that is needed by the individual or the organization. 
+
+    Globalplex believes in supporting the process of discovering and developing people’s potential. Therefore, we will extensively examine and ascertain the most effective way to accomplish the desired results. We are flexible and seek to advance the success of our clients until they are satisfied and see a difference in their expected outcome and progress. We are here to help you.
+
 topSeparatorImg: ../img/about-divider.png
 values:
   title: Our values

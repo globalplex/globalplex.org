@@ -5,20 +5,13 @@ const ContactSection = class extends React.Component {
   render() {
     return (
       <footer className="footer has-background-light has-text-black">
-        <div className="content has-text-centered">
-          {/* <img
-            src={logo}
-            alt="Globalplex"
-            style={{ width: '14em', height: '5em' }}
-          /> */}
-        </div>
         <div className="section">
           <div className="content">
             <div className="columns is-vcentered">
               <div className="column is-1" />
               <div className="column is-three-fifths">
                 <h1 className="title">Interested to learn more?</h1>
-                <p>
+                <p className>
                   Schedule a consultation session with us and see how we can
                   help you and your team reach your full potential.
                 </p>

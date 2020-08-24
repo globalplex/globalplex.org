@@ -3,12 +3,14 @@ import React from "react";
 const ContentCard = (props) => (
   <div className="card">
     <div
-      className="card-image"
+      className="card-image section"
       style={{
         backgroundPosition: "center",
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
-        backgroundImage: `url(${props.img})`,
+        backgroundImage: `url(${props.image})`,
+        paddingLeft: 0,
+        paddingRight: 0,
       }}
     >
       <div style={{ padding: 0 + "em" }}>

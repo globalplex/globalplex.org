@@ -27,6 +27,8 @@ const ServicesPage = ({ data }) => {
         link2="#services-career"
         tab3="Personal Development"
         link3="#services-development"
+        tab4="Teams & Corporates"
+        link4="#services-teams"
       />
       <Container>
         {content.map((item) => (
@@ -37,7 +39,7 @@ const ServicesPage = ({ data }) => {
               {item.topics.map((subitem) => (
                 <div className="column">
                   <ContentCard
-                    img={subitem.image}
+                    image={subitem.image}
                     title={subitem.title}
                     subtitle={subitem.description}
                   />
@@ -64,7 +66,7 @@ const ServicesPage = ({ data }) => {
             <h3 className="title is-3 has-text-light">{mode.title}</h3>
             <br />
             {mode.ways.map((item) => (
-              <p className="subitle is-5 has-text-light">{item}</p>
+              <p className="subtitle has-text-light">{item}</p>
             ))}
           </div>
           <div className="column is-1" />

@@ -21,6 +21,8 @@ const TestimonialsPage = ({ data }) => {
         link2="#testimonials-career"
         tab3="Personal Development"
         link3="#testimonials-development"
+        tab4="Teams & Corporates"
+        link4="#testimonials-teams"
       />
       <Container>
         {content.map((item) => (
@@ -31,8 +33,10 @@ const TestimonialsPage = ({ data }) => {
               {item.testimonials.map((subitem) => (
                 <div className="column">
                   <TestimonialsCard
+                    image={subitem.image}
                     name={subitem.name}
                     title={subitem.title}
+                    subtitle={subitem.subtitle}
                     blurb={subitem.blurb}
                     content={subitem.description}
                   />
