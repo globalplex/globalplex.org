@@ -77,3 +77,21 @@ body, button, input, select, textarea {
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
 }
+
+.index-sections section:nth-child(odd) {
+  background-color: #F5F5F5;
+}
+
+.index-section-title {
+  color: rgba(0,0,0,0.3);
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.index-section-title:after {
+  border: 2px solid $primary;
+  content: '';
+  display: block;
+  margin-top: 0.5rem;
+  width: 3rem;
+}
