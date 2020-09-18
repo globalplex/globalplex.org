@@ -36,10 +36,10 @@ approach:
       description: >-
         These training sessions are focused on the individual. It is more effective for training soft skills.
     - image: ../img/home-teamtraining.png
-      title: Team based training
+      title: Team based trainings
       description: >-
         Used to build leadership and teamwork quailites of your members to work better as a team.
-    - image: ../img/home-corporatetrianing.png
+    - image: ../img/home-corporatetraining.png
       title: Corporate-wide sessions
       description: >-
         Corporate wide training sessions are most effective at instilling and setting corporate culture.

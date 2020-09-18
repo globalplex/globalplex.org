@@ -196,6 +196,7 @@ export const query = graphql`
           title
           blurb
           content {
+            image
             title
             description
           }
