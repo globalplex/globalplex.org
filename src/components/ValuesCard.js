@@ -8,9 +8,9 @@ const ValuesCard = (props) => (
           {/* <figure className="image is-64x64">
                     <img src="https://bulma.io/images/placeholders/128x128.png" alt="Image" />
                     </figure> */}
-          <h1 className="title has-text-centered has-text-primary">
+          <h3 className="title has-text-centered has-text-primary">
             {props.title}
-          </h1>
+          </h3>
         </div>
       </div>
       <div className="column" style={{ padding: 0 }}>

@@ -20,7 +20,7 @@ story:
 
 topSeparatorImg: ../img/about-divider.png
 values:
-  title: Our values
+  title: Our Values
   blurb: The values that guide us in everything that we do.
   content:
     - image: /img/effectivelyEquipping.png
@@ -36,7 +36,7 @@ values:
       description: >-
         Our program helps you expand your influence and develop life-long impact within your organization
 founders:
-  title: Our founders
+  title: Our Founders
   content:
     - name: Seth S. Kim
       position: CEO
@@ -58,7 +58,7 @@ founders:
         Joanna holds a MSc. in Operational Research from The Polytechnic University of Hong Kong, and B.S. degrees in Financial Mathematics as well as Economics from the University of Michigan.
 bottomSeparatorImg: ../img/about-divider-2.png
 team:
-  title: Our team
+  title: Our Team
   content:
     - name: Jacky Lee
       position: CTO

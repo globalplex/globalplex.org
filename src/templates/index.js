@@ -28,13 +28,11 @@ const IndexPage = ({ data }) => {
       >
         <div className="hero-body">
           <div className="container">
-            <h1 className="title is-1 has-text-left">{landing.title}</h1>
-            <h2 className="subtitle has-text-left">
-              Our mission is to effectively{" "}
-              <span style={{ color: "#F18B15" }}>equip</span> people to{" "}
-              <span style={{ color: "#F18B15" }}>excel</span> in life and{" "}
-              <span style={{ color: "#F18B15" }}>expand</span> their influence
-            </h2>
+            <p className="title is-1 has-text-left">{landing.title}</p>
+            <p className="subtitle has-text-left">
+              Our mission is to effectively equip people to excel in life and
+              expand their influence
+            </p>
             <Link to="/contact/">
               <button className="button is-outlined is-primary is-medium has-text-weight-semibold">
                 Contact Us
@@ -167,7 +165,7 @@ const IndexPage = ({ data }) => {
       </section>
 
       <section className="section has-background-light">
-        <div class="container">
+        <div className="container">
           <div className="box has-background-dark">
             <div className="section columns has-text-white is-vcentered is-medium">
               <div className="column is-1" />

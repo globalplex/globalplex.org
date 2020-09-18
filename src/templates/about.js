@@ -40,7 +40,7 @@ const AboutPage = ({ data }) => {
         <div id="about-story" className="section">
           <div className="columns">
             <div className="column is-two-thirds">
-              <h1 className="title has-text-primary">{story.title}</h1>
+              <h1 className="title">{story.title}</h1>
               <p>{story.description}</p>
             </div>
             <div className="column">
@@ -64,9 +64,7 @@ const AboutPage = ({ data }) => {
       <div className="has-background-white has-text-black">
         <Container>
           <div id="about-values" className="section">
-            <h1 className="title has-text-centered has-text-primary">
-              {values.title}
-            </h1>
+            <h1 className="title">{values.title}</h1>
             <h2 className="subtitle has-text-centered">{values.blurb}</h2>
             <br />
             {values.content.map((item) => (
@@ -79,7 +77,7 @@ const AboutPage = ({ data }) => {
       <div className="has-background-light has-text-black">
         <Container>
           <div id="about-founders" className="section">
-            <h1 className="title has-text-primary">{founders.title}</h1>
+            <h1 className="title">{founders.title}</h1>
             <br />
             {founders.content.map((item) => (
               <ProfileCard
@@ -104,7 +102,7 @@ const AboutPage = ({ data }) => {
 
       <Container>
         <div id="about-founders" className="section">
-          <h1 className="title has-text-primary">{team.title}</h1>
+          <h1 className="title">{team.title}</h1>
           <br />
           <div className="columns">
             {team.content.map((item) => (

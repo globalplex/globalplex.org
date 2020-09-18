@@ -33,7 +33,7 @@ const ServicesPage = ({ data }) => {
       <Container>
         {content.map((item) => (
           <section id={item.id} className="section">
-            <h1 className="title has-text-primary">{item.title}</h1>
+            <h1 className="title">{item.title}</h1>
             <p className="subtitle">{item.blurb}</p>
             <div className="columns">
               {item.topics.map((subitem) => (

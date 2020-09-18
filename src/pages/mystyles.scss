@@ -16,6 +16,19 @@ $box-padding: 0;
 
 @import "~bulma/bulma.sass";
 
+h1 {
+  align-items: center;
+  display: flex;
+}
+
+h1::after {
+  background-color: $primary;
+  content: '';
+  flex: 1;
+  height: 1px;
+  margin-left: 1rem;
+}
+
 body, button, input, select, textarea {
     font-family: inherit;
 }

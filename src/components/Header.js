@@ -13,10 +13,10 @@ const Header = (props) => (
   >
     <div className="hero-body">
       <div className="container">
-        <h1 className="title" style={{ color: "#F18B15" }}>
+        <p className="title is-1" style={{ color: "#F18B15" }}>
           {props.title}
-        </h1>
-        <h2 className="subtitle has-text-white is-size-3">{props.subtitle}</h2>
+        </p>
+        <p className="subtitle has-text-white is-3">{props.subtitle}</p>
       </div>
     </div>
   </section>
