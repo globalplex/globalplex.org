@@ -100,7 +100,7 @@ const AboutPage = ({ data }) => {
         />
       </figure>
 
-      <Container>
+      {/*<Container>
         <div id="about-founders" className="section">
           <h1 className="title">{team.title}</h1>
           <br />
@@ -117,7 +117,7 @@ const AboutPage = ({ data }) => {
             ))}
           </div>
         </div>
-      </Container>
+      </Container>*/}
       <ContactSection />
     </Layout>
   );
