@@ -23,54 +23,56 @@ const ContactPage = ({ data }) => {
               <div className="column is-7">
                 <p>{blurb}</p>
                 <br />
-                <div className="field">
-                  <label className="label">Name</label>
-                  <div className="control">
-                    <input
-                      className="input"
-                      type="text"
-                      placeholder="Your name"
-                    />
+                <form name="contact" netlify>
+                  <div className="field">
+                    <label className="label">Name</label>
+                    <div className="control">
+                      <input
+                        className="input"
+                        type="text"
+                        placeholder="Your name"
+                      />
+                    </div>
                   </div>
-                </div>
 
-                <div className="field">
-                  <label className="label">Email</label>
-                  <div className="control">
-                    <input
-                      className="input"
-                      type="email"
-                      placeholder="Your email"
-                    />
+                  <div className="field">
+                    <label className="label">Email</label>
+                    <div className="control">
+                      <input
+                        className="input"
+                        type="email"
+                        placeholder="Your email"
+                      />
+                    </div>
                   </div>
-                </div>
 
-                <div className="field">
-                  <label className="label">Company / Organization</label>
-                  <div className="control">
-                    <input
-                      className="input"
-                      type="text"
-                      placeholder="Your organization"
-                    />
+                  <div className="field">
+                    <label className="label">Company / Organization</label>
+                    <div className="control">
+                      <input
+                        className="input"
+                        type="text"
+                        placeholder="Your organization"
+                      />
+                    </div>
                   </div>
-                </div>
 
-                <div className="field">
-                  <label className="label">Message</label>
-                  <div className="control">
-                    <textarea
-                      className="textarea"
-                      placeholder="Drop us a line!"
-                    ></textarea>
+                  <div className="field">
+                    <label className="label">Message</label>
+                    <div className="control">
+                      <textarea
+                        className="textarea"
+                        placeholder="Drop us a line!"
+                      ></textarea>
+                    </div>
                   </div>
-                </div>
 
-                <div className="field">
-                  <div className="control">
-                    <button className="button is-link">Submit</button>
+                  <div className="field">
+                    <div className="control">
+                      <button className="button is-link">Submit</button>
+                    </div>
                   </div>
-                </div>
+                </form>
               </div>
               <div className="column is-1" />
               <div className="column">
