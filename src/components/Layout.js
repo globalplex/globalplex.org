@@ -10,7 +10,7 @@ const TemplateWrapper = ({ children }) => {
   return (
     <div>
       <Helmet>
-        <html lang="en" />
+        <html className="has-navbar-fixed-top" lang="en" />
         <title>{title}</title>
         <meta name="description" content={description} />
 

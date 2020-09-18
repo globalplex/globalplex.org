@@ -1,8 +1,7 @@
 import React from "react";
-import "./modules.module.css";
 
 const SubpageBar = (props) => (
-  <div className="tabs is-fullwidth is-hidden-mobile has-background-black has-text-white">
+  <div className="tabs is-fullwidth is-hidden-mobile has-background-black has-text-white py-2">
     <ul>
       <li>
         <a href={props.link1}>{props.tab1}</a>

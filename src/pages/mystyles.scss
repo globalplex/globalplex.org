@@ -78,6 +78,10 @@ body, button, input, select, textarea {
     transform: translateY(-50%);
 }
 
+.card {
+  height: 100%;
+}
+
 .index-sections section:nth-child(odd) {
   background-color: #F5F5F5;
 }

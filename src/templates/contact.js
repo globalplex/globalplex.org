@@ -9,10 +9,11 @@ const ContactPage = ({ data }) => {
 
   return (
     <Layout>
-      <section style={{ paddingTop: "3rem" }}>
+      <section className="hero">
         <div className="hero-body">
           <div className="container">
             <h1 className="title">{title}</h1>
+            <p>{blurb}</p>
           </div>
         </div>
       </section>
@@ -21,8 +22,6 @@ const ContactPage = ({ data }) => {
           <div className="content">
             <div className="columns is-vcentered">
               <div className="column is-7">
-                <p>{blurb}</p>
-                <br />
                 <form name="contact" netlify>
                   <div className="field">
                     <label className="label">Name</label>
@@ -69,7 +68,7 @@ const ContactPage = ({ data }) => {
 
                   <div className="field">
                     <div className="control">
-                      <button className="button is-link">Submit</button>
+                      <button className="button is-primary">Submit</button>
                     </div>
                   </div>
                 </form>
