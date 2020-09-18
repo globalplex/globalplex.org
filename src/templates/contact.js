@@ -22,14 +22,22 @@ const ContactPage = ({ data }) => {
           <div className="content">
             <div className="columns is-vcentered">
               <div className="column is-7">
-                <form name="contact" netlify>
+                <form
+                  name="contact"
+                  method="post"
+                  data-netlify="true"
+                  data-netlify-honeypot="bot-field"
+                >
+                  <input type="hidden" name="bot-field" />
+                  <input type="hidden" name="form-name" value="contact" />
                   <div className="field">
                     <label className="label">Name</label>
                     <div className="control">
                       <input
                         className="input"
+                        name="name"
+                        placeholder="Your Name"
                         type="text"
-                        placeholder="Your name"
                       />
                     </div>
                   </div>
@@ -39,8 +47,9 @@ const ContactPage = ({ data }) => {
                     <div className="control">
                       <input
                         className="input"
+                        name="email"
+                        placeholder="Your Email"
                         type="email"
-                        placeholder="Your email"
                       />
                     </div>
                   </div>
@@ -50,8 +59,9 @@ const ContactPage = ({ data }) => {
                     <div className="control">
                       <input
                         className="input"
+                        name="organization"
+                        placeholder="Your Organization"
                         type="text"
-                        placeholder="Your organization"
                       />
                     </div>
                   </div>
@@ -61,6 +71,7 @@ const ContactPage = ({ data }) => {
                     <div className="control">
                       <textarea
                         className="textarea"
+                        name="message"
                         placeholder="Drop us a line!"
                       ></textarea>
                     </div>
@@ -68,7 +79,9 @@ const ContactPage = ({ data }) => {
 
                   <div className="field">
                     <div className="control">
-                      <button className="button is-primary">Submit</button>
+                      <button className="button is-primary" type="submit">
+                        Submit
+                      </button>
                     </div>
                   </div>
                 </form>
