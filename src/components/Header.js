@@ -1,25 +1,27 @@
 import React from "react";
 
-const Header = (props) => (
-  <section
-    className="hero is-medium has-text-light"
-    style={{
-      paddingTop: "3rem",
-      backgroundPosition: "center",
-      backgroundSize: "cover",
-      backgroundRepeat: "no-repeat",
-      backgroundImage: `url(${props.img})`,
-    }}
+const Header = ({ backgroundImage, subtitle, title }) => (
+  <header
+    className="hero hero-background-image"
+    style={{ backgroundImage: `url(${backgroundImage})` }}
   >
     <div className="hero-body">
       <div className="container">
-        <p className="title is-1" style={{ color: "#F18B15" }}>
-          {props.title}
-        </p>
-        <p className="subtitle has-text-white is-3">{props.subtitle}</p>
+        <div className="columns">
+          <div className="column is-two-thirds">
+            <div className="pt-4" />
+            <div className="pt-6" />
+            <div className="pt-6" />
+            <div className="pt-6" />
+            <h1 className="title is-6 underlined-heading has-text-white">
+              {title}
+            </h1>
+            <p className="subtitle is-3 has-text-white pt-3">{subtitle}</p>
+          </div>
+        </div>
       </div>
     </div>
-  </section>
+  </header>
 );
 
 export default Header;

@@ -2,8 +2,7 @@ import React from "react";
 import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import Header from "../components/Header";
-import SubpageBar from "../components/SubpageBar";
-import Container from "../components/Container";
+import Tabs from "../components/Tabs";
 import ContactSection from "../components/ContactSection";
 import ContentCard from "../components/ContentCard";
 import "../pages/mystyles.scss";
@@ -19,20 +18,16 @@ const ServicesPage = ({ data }) => {
 
   return (
     <Layout>
-      <Header title={title} subtitle={blurb} img={image} />
-      <SubpageBar
-        tab1="Leadership & Management"
-        link1="#services-leadership"
-        tab2="Career Acceleration"
-        link2="#services-career"
-        tab3="Personal Development"
-        link3="#services-development"
-        tab4="Teams & Corporates"
-        link4="#services-teams"
+      <Header title={title} subtitle={blurb} backgroundImage={image} />
+      <Tabs
+        data={content.map((item) => ({
+          target: `#${item.id}`,
+          title: item.title,
+        }))}
       />
-      <Container>
-        {content.map((item) => (
-          <section id={item.id} className="section">
+      {content.map((item) => (
+        <section id={item.id} className="section">
+          <div className="container">
             <h1 className="title">{item.title}</h1>
             <p className="subtitle">{item.blurb}</p>
             <div className="columns">
@@ -46,10 +41,10 @@ const ServicesPage = ({ data }) => {
                 </div>
               ))}
             </div>
-          </section>
-        ))}
-        <br />
-      </Container>
+          </div>
+        </section>
+      ))}
+      <br />
 
       <div className="has-background-dark has-text-light">
         <div className="columns is-vcentered">

@@ -2,8 +2,7 @@ import React from "react";
 import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import Header from "../components/Header";
-import SubpageBar from "../components/SubpageBar";
-import Container from "../components/Container";
+import Tabs from "../components/Tabs";
 import ContactSection from "../components/ContactSection";
 import ValuesCard from "../components/ValuesCard";
 
@@ -25,19 +24,17 @@ const AboutPage = ({ data }) => {
 
   return (
     <Layout>
-      <Header title={title} subtitle={blurb} img={image} />
-      <SubpageBar
-        tab1="Our Story"
-        link1="#about-story"
-        tab2="Our Founders"
-        link2="#about-founders"
-        tab3="Our Values"
-        link3="#about-values"
-        tab4="Our Team"
-        link4="#about-team"
+      <Header title={title} subtitle={blurb} backgroundImage={image} />
+      <Tabs
+        data={[
+          { target: "#about-story", title: "Our Story" },
+          { target: "#about-founders", title: "Our Founders" },
+          { target: "#about-values", title: "Our Values" },
+          { target: "#about-team", title: "Our Team" },
+        ]}
       />
-      <Container>
-        <div id="about-story" className="section">
+      <div id="about-story" className="section">
+        <div className="container">
           <div className="columns">
             <div className="column is-two-thirds">
               <h1 className="title">{story.title}</h1>
@@ -50,7 +47,7 @@ const AboutPage = ({ data }) => {
             </div>
           </div>
         </div>
-      </Container>
+      </div>
 
       <figure className="image">
         <img
@@ -62,8 +59,8 @@ const AboutPage = ({ data }) => {
       </figure>
 
       <div className="has-background-white has-text-black">
-        <Container>
-          <div id="about-values" className="section">
+        <div id="about-values" className="section">
+          <div className="container">
             <h1 className="title">{values.title}</h1>
             <h2 className="subtitle has-text-centered">{values.blurb}</h2>
             <br />
@@ -71,12 +68,12 @@ const AboutPage = ({ data }) => {
               <ValuesCard title={item.title} subtitle={item.description} />
             ))}
           </div>
-        </Container>
+        </div>
       </div>
 
       <div className="has-background-light has-text-black">
-        <Container>
-          <div id="about-founders" className="section">
+        <div id="about-founders" className="section">
+          <div className="container">
             <h1 className="title">{founders.title}</h1>
             <br />
             {founders.content.map((item) => (
@@ -88,7 +85,7 @@ const AboutPage = ({ data }) => {
               />
             ))}
           </div>
-        </Container>
+        </div>
       </div>
 
       <figure className="image">
@@ -100,8 +97,9 @@ const AboutPage = ({ data }) => {
         />
       </figure>
 
-      {/*<Container>
-        <div id="about-founders" className="section">
+      {/*
+      <div id="about-founders" className="section">
+        <div className="container">
           <h1 className="title">{team.title}</h1>
           <br />
           <div className="columns">
@@ -117,7 +115,8 @@ const AboutPage = ({ data }) => {
             ))}
           </div>
         </div>
-      </Container>*/}
+      </div>
+      */}
       <ContactSection />
     </Layout>
   );

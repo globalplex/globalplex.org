@@ -1,85 +1,53 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "gatsby";
+
 import logo from "../img/logo.svg";
 
-const Navbar = class extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      active: false,
-      navBarActiveClass: "",
-    };
-  }
+const Navbar = () => {
+  const [isActive, setIsActive] = useState(false);
 
-  toggleHamburger = () => {
-    // toggle the active boolean in the state
-    this.setState(
-      {
-        active: !this.state.active,
-      },
-      // after state has been updated,
-      () => {
-        // set the class in state for the navbar accordingly
-        this.state.active
-          ? this.setState({
-              navBarActiveClass: "is-active",
-            })
-          : this.setState({
-              navBarActiveClass: "",
-            });
-      }
-    );
-  };
-
-  render() {
-    return (
-      <nav
-        className="navbar is-dark is-fixed-top"
-        role="navigation"
-        aria-label="main-navigation"
-      >
-        <div className="container">
-          <div className="navbar-brand">
-            <Link to="/" className="navbar-item" title="Logo">
-              <img src={logo} alt="Globalplex" />
-            </Link>
-            {/* Hamburger menu */}
-            <div
-              className={`navbar-burger burger ${this.state.navBarActiveClass}`}
-              data-target="navMenu"
-              onClick={() => this.toggleHamburger()}
-            >
-              <span />
-              <span />
-              <span />
-            </div>
-          </div>
+  return (
+    <nav className="navbar is-fixed-top is-dark">
+      <div className="container">
+        <div className="navbar-brand">
+          <Link className="navbar-item" to="/">
+            <img src={logo} alt="Globalplex" />
+          </Link>
           <div
-            id="navMenu"
-            className={`navbar-menu navbar-end ${this.state.navBarActiveClass}`}
+            className={`navbar-burger ${isActive && "is-active"}`}
+            data-target="navbar-menu"
+            onClick={() => setIsActive(!isActive)}
           >
-            <div className="navbar-end has-text-centered">
-              <Link className="navbar-item" to="/">
-                Home
-              </Link>
-              <Link className="navbar-item" to="/about">
-                About
-              </Link>
-              <Link className="navbar-item" to="/services">
-                Services
-              </Link>
-              <Link className="navbar-item" to="/testimonials">
-                Testimonials
-              </Link>
-              <Link className="navbar-item" to="/contact">
-                Contact
-              </Link>
-            </div>
+            <span />
+            <span />
+            <span />
           </div>
         </div>
-      </nav>
-    );
-  }
+        <div
+          className={`navbar-menu ${isActive && "is-active"}`}
+          id="navbar-menu"
+        >
+          <div className="navbar-end">
+            <Link className="navbar-item" to="/">
+              Home
+            </Link>
+            <Link className="navbar-item" to="/about">
+              About
+            </Link>
+            <Link className="navbar-item" to="/services">
+              Services
+            </Link>
+            <Link className="navbar-item" to="/testimonials">
+              Testimonials
+            </Link>
+            <Link className="navbar-item" to="/contact">
+              Contact
+            </Link>
+          </div>
+        </div>
+      </div>
+    </nav>
+  );
 };
 
 export default Navbar;
