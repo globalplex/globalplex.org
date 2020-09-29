@@ -2,7 +2,7 @@ import React from "react";
 import { graphql, Link } from "gatsby";
 import Layout from "../components/Layout";
 import TestimonialsCard from "../components/TestimonialsCard";
-import ContentCard from "../components/ContentCard";
+import VerticalServicesCard from "../components/VerticalServicesCard";
 import IndexSection from "../components/IndexSection";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "../utils/fontawesome";
@@ -88,8 +88,8 @@ const IndexPage = ({ data }) => {
           <div className="columns">
             {approach.content.map((item) => (
               <div className="column">
-                <ContentCard
-                  image={item.image}
+                <VerticalServicesCard
+                  backgroundImage={item.image}
                   title={item.title}
                   subtitle={item.description}
                 />

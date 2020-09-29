@@ -4,7 +4,8 @@ import Layout from "../components/Layout";
 import Header from "../components/Header";
 import Tabs from "../components/Tabs";
 import ContactSection from "../components/ContactSection";
-import ContentCard from "../components/ContentCard";
+import HorizontalServicesCard from "../components/HorizontalServicesCard";
+import VerticalServicesCard from "../components/VerticalServicesCard";
 import "../pages/mystyles.scss";
 
 const ServicesPage = ({ data }) => {
@@ -25,25 +26,36 @@ const ServicesPage = ({ data }) => {
           title: item.title,
         }))}
       />
-      {content.map((item) => (
-        <section id={item.id} className="section">
-          <div className="container">
-            <h1 className="title">{item.title}</h1>
-            <p className="subtitle">{item.blurb}</p>
-            <div className="columns">
-              {item.topics.map((subitem) => (
-                <div className="column">
-                  <ContentCard
-                    image={subitem.image}
-                    title={subitem.title}
-                    subtitle={subitem.description}
-                  />
-                </div>
-              ))}
+      {content.map((item) => {
+        const ServicesCard =
+          item.topics.length < 3
+            ? HorizontalServicesCard
+            : VerticalServicesCard;
+        return (
+          <section id={item.id} className="section">
+            <div className="container">
+              <h1 className="title">{item.title}</h1>
+              <p className="subtitle">{item.blurb}</p>
+              <div className="columns is-multiline is-centered">
+                {item.topics.map((subitem) => (
+                  <div
+                    className={`column ${
+                      item.topics.length < 3 &&
+                      "is-four-fifths-tablet is-half-widescreen"
+                    }`}
+                  >
+                    <ServicesCard
+                      backgroundImage={subitem.image}
+                      subtitle={subitem.description}
+                      title={subitem.title}
+                    />
+                  </div>
+                ))}
+              </div>
             </div>
-          </div>
-        </section>
-      ))}
+          </section>
+        );
+      })}
       <br />
 
       <div className="has-background-dark has-text-light">
