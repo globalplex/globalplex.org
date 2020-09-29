@@ -1,35 +1,24 @@
 import React from "react";
 import { Link } from "gatsby";
 
-const ContactSection = class extends React.Component {
-  render() {
-    return (
-      <footer className="footer has-background-light has-text-black">
-        <div className="section">
-          <div className="content">
-            <div className="columns is-vcentered">
-              <div className="column is-1" />
-              <div className="column is-three-fifths">
-                <h1 className="title">Interested to learn more?</h1>
-                <p className>
-                  Schedule a consultation session with us and see how we can
-                  help you and your team reach your full potential.
-                </p>
-              </div>
-              <div className="column is-1" />
-              <div className="column">
-                <Link to="/contact/">
-                  <button className="button is-primary is-medium has-text-weight-semibold">
-                    Contact Us
-                  </button>
-                </Link>
-              </div>
-            </div>
-          </div>
+const ContactSection = () => (
+  <section className="section">
+    <div className="container">
+      <div className="columns is-vcentered is-centered px-6">
+        <div className="column is-half is-one-third-widescreen has-text-centered-mobile">
+          <p className="title is-2 has-text-dark">Ready for a consultation?</p>
         </div>
-      </footer>
-    );
-  }
-};
+        <div className="column is-one-fifth" />
+        <div className="column is-narrow has-text-centered-mobile">
+          <Link to="/contact">
+            <button className="button is-primary is-uppercase has-text-weight-bold px-6 py-5">
+              Contact Us
+            </button>
+          </Link>
+        </div>
+      </div>
+    </div>
+  </section>
+);
 
 export default ContactSection;
