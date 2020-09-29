@@ -1,7 +1,9 @@
 @charset "utf-8";
 
 // If need, change your variables before importing Bulma
-$primary: #F18B15;
+$primary: #FF8700;
+
+$title-color: $primary;
 
 $navbar-background-color: hsl(0, 0%, 21%);
 $navbar-item-color: white;
@@ -17,25 +19,12 @@ $box-padding: 0;
 
 @import "~bulma/bulma.sass";
 
-h1 {
-  align-items: center;
-  display: flex;
-}
-
-h1::after {
-  background-color: $primary;
-  content: '';
-  flex: 1;
-  height: 1px;
-  margin-left: 1rem;
-}
-
 body, button, input, select, textarea {
     font-family: inherit;
 }
 
 .globalplex-orange {
-    color: #F18B15;
+    color: #FF8700;
 }
 
 .navbar-item img {
@@ -74,19 +63,20 @@ body, button, input, select, textarea {
 }
 
 section:nth-child(odd) {
-  background-color: #F5F5F5;
+  background-color: hsl(0, 0%, 96%);
 }
 
-.hero-background-image {
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+.has-background {
+  overflow: hidden;
+  position: relative;
 }
 
-.underlined-heading {
-  color: rgba(0,0,0,0.3);
-  font-weight: bold;
-  text-transform: uppercase;
+.hero-background {
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  position: absolute;
+  width: 100%;
 }
 
 .underlined-heading:after {

@@ -1,10 +1,8 @@
 import React from "react";
 
 const Header = ({ backgroundImage, subtitle, title }) => (
-  <header
-    className="hero hero-background-image"
-    style={{ backgroundImage: `url(${backgroundImage})` }}
-  >
+  <header className="hero has-background">
+    <img className="hero-background" src={backgroundImage} />
     <div className="hero-body">
       <div className="container">
         <div className="columns">
@@ -13,7 +11,7 @@ const Header = ({ backgroundImage, subtitle, title }) => (
             <div className="pt-6" />
             <div className="pt-6" />
             <div className="pt-6" />
-            <h1 className="title is-6 underlined-heading has-text-white">
+            <h1 className="title is-6 underlined-heading is-uppercase has-text-white">
               {title}
             </h1>
             <p className="subtitle is-3 has-text-white pt-3">{subtitle}</p>
