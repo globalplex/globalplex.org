@@ -107,3 +107,26 @@ section:nth-child(odd) {
 .space-between {
   justify-content: space-between;
 }
+
+.has-boxed-counter {
+  counter-reset: counter;
+  list-style: none;
+  padding-left: 3rem;
+}
+
+.has-boxed-counter li {
+  counter-increment: counter;
+  margin-top: 1rem;
+  position: relative;
+}
+
+.has-boxed-counter li::before {
+  border: 1px hsl(0, 0%, 96%) solid;
+  color: hsl(0, 0%, 96%);
+  content: counter(counter);
+  height: 2rem;
+  left: -3rem;
+  position: absolute;
+  text-align: center;
+  width: 2rem;
+}

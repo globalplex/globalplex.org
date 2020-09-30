@@ -56,29 +56,26 @@ const ServicesPage = ({ data }) => {
           </section>
         );
       })}
-      <br />
 
-      <div className="has-background-dark has-text-light">
-        <div className="columns is-vcentered">
-          <div style={{ paddingTop: "0" }} className="column is-half">
-            <figure className="image">
-              <img
-                style={{ marginBottom: "0" }}
-                src={mode.image}
-                alt="Offer Format"
-              />
+      <section>
+        <div className="columns is-desktop is-gapless is-vcentered has-background-dark">
+          <div className="column is-hidden-touch is-two-fifths-widescreen is-one-third-fullhd">
+            <figure className="image is-4by3">
+              <img src={mode.image} />
             </figure>
           </div>
-          <div className="column is-half">
-            <h3 className="title is-3 has-text-light">{mode.title}</h3>
-            <br />
-            {mode.ways.map((item) => (
-              <p className="subtitle has-text-light">{item}</p>
-            ))}
+          <div className="column">
+            <div className="section px-6">
+              <p className="title is-3 has-text-light">{mode.title}</p>
+              <ol className="has-boxed-counter">
+                {mode.ways.map((item) => (
+                  <li className="is-size-5 has-text-light">{item}</li>
+                ))}
+              </ol>
+            </div>
           </div>
-          <div className="column is-1" />
         </div>
-      </div>
+      </section>
 
       <ContactSection />
     </Layout>
