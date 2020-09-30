@@ -18,8 +18,8 @@ const ContactPage = ({ data }) => {
       </section>
       <section className="section">
         <div className="container">
-          <div className="columns is-vcentered">
-            <div className="column is-7">
+          <div className="columns is-desktop">
+            <div className="column is-half-desktop">
               <form
                 name="contact"
                 method="post"
@@ -84,16 +84,13 @@ const ContactPage = ({ data }) => {
                 </div>
               </form>
             </div>
-            <div className="column is-1" />
-            <div className="column">
-              <div className="card">
-                <div className="card-content">
-                  <h3 className="title">{sampleQuestions.title}</h3>
-                  <br />
-                  {sampleQuestions.questions.map((item) => (
-                    <p className="subtitle">{item}</p>
-                  ))}
-                </div>
+            <div className="column" />
+            <div className="column is-half-desktop is-two-fifths-widescreen">
+              <div className="section">
+                <h3 className="title has-text-dark">{sampleQuestions.title}</h3>
+                {sampleQuestions.questions.map((item) => (
+                  <p>{item}</p>
+                ))}
               </div>
             </div>
           </div>
