@@ -117,7 +117,7 @@ const IndexPage = ({ data }) => {
         <IndexSection subtitle={testimonials.blurb} title={testimonials.title}>
           <div className="columns">
             {testimonials.content.map((item) => (
-              <div className="column">
+              <div className="column testimonial-column">
                 <TestimonialsCard
                   image={item.image}
                   name={item.name}

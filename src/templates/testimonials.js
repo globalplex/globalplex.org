@@ -19,28 +19,30 @@ const TestimonialsPage = ({ data }) => {
           title: item.title,
         }))}
       />
-      {content.map((item) => (
-        <section id={item.id} className="section">
-          <div className="container">
-            <h1 className="title">{item.title}</h1>
-            <p className="subtitle">{item.blurb}</p>
-            <div className="columns">
-              {item.testimonials.map((subitem) => (
-                <div className="column">
-                  <TestimonialsCard
-                    image={subitem.image}
-                    name={subitem.name}
-                    title={subitem.title}
-                    subtitle={subitem.subtitle}
-                    blurb={subitem.blurb}
-                    content={subitem.description}
-                  />
-                </div>
-              ))}
+      <section>
+        {content.map((item) => (
+          <div id={item.id} className="section">
+            <div className="container">
+              <h1 className="title">{item.title}</h1>
+              <p className="subtitle">{item.blurb}</p>
+              <div className="columns">
+                {item.testimonials.map((subitem) => (
+                  <div className="column testimonial-column">
+                    <TestimonialsCard
+                      image={subitem.image}
+                      name={subitem.name}
+                      title={subitem.title}
+                      subtitle={subitem.subtitle}
+                      blurb={subitem.blurb}
+                      content={subitem.description}
+                    />
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
-        </section>
-      ))}
+        ))}
+      </section>
       <ContactSection />
     </Layout>
   );
