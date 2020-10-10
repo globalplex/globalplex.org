@@ -3,6 +3,7 @@ import { graphql, Link } from "gatsby";
 import Layout from "../components/Layout";
 import TestimonialsCard from "../components/TestimonialsCard";
 import VerticalServicesCard from "../components/VerticalServicesCard";
+import IndexServicesCard from "../components/IndexServicesCard";
 import IndexSection from "../components/IndexSection";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "../utils/fontawesome";
@@ -19,144 +20,109 @@ const IndexPage = ({ data }) => {
 
   return (
     <Layout>
-      <div className="index-sections">
-        <section
-          className="hero is-dark is-bold is-large is-fullheight"
-          style={{
-            backgroundPosition: "center",
-            backgroundSize: "cover",
-            backgroundRepeat: "no-repeat",
-            backgroundImage: `url(../img/home-cover.jpg)`,
-          }}
-        >
-          <div className="hero-body">
-            <div className="container">
-              <p className="title is-1 has-text-left">{landing.title}</p>
-              <p className="subtitle has-text-left">
-                Our mission is to effectively equip people to excel in life and
-                expand their influence
-              </p>
-              <Link to="/contact/">
-                <button className="button is-outlined is-primary is-medium has-text-weight-semibold">
-                  Contact Us
-                </button>
-              </Link>
+      <header className="hero is-large is-relative is-clipped">
+        <img
+          alt="Banner background image"
+          className="hero-background"
+          src="../img/home-cover.jpg"
+        />
+        <div className="hero-body">
+          <div className="container py-6">
+            <div className="columns has-text-centered-mobile">
+              <div className="column is-four-fifths is-half-widescreen">
+                <p className="title is-size-1 is-spaced has-text-weight-light has-text-light">
+                  {landing.title}
+                </p>
+                <p className="subtitle has-text-light">
+                  Our mission is to effectively equip people to excel in life
+                  and expand their influence
+                </p>
+                <Link to="/contact">
+                  <button className="button is-primary is-uppercase has-text-weight-bold mt-2 px-5 py-5">
+                    Contact Us
+                  </button>
+                </Link>
+              </div>
             </div>
           </div>
-        </section>
+        </div>
+      </header>
+      <section />
 
-        <IndexSection subtitle={services.blurb} title={services.title}>
-          <div className="columns is-vcentered">
+      <IndexSection subtitle={services.blurb} title={services.title}>
+        <div className="columns is-desktop is-vcentered">
+          <div className="column is-hidden-touch is-one-third-fullhd">
+            <figure className="image is-square">
+              <img src={services.image} />
+            </figure>
+          </div>
+          <div className="column index-services-column">
+            {services.content.map((item) => (
+              <IndexServicesCard
+                subtitle={item.description}
+                title={item.title}
+              />
+            ))}
+          </div>
+        </div>
+      </IndexSection>
+
+      <IndexSection subtitle={approach.blurb} title={approach.title}>
+        <div className="columns">
+          {approach.content.map((item) => (
             <div className="column">
-              <figure className="image">
-                <img src={services.image} alt="About Founders" />
-              </figure>
+              <VerticalServicesCard
+                backgroundImage={item.image}
+                title={item.title}
+                subtitle={item.description}
+              />
             </div>
-            <div className="column is-1" />
-            <div className="column is-half">
-              {services.content.map((item) => (
-                <>
-                  <Link to={item.link}>
-                    <div className="box">
-                      <div className="section" style={{ padding: "1.5rem" }}>
-                        <div className="columns is-vcentered">
-                          <div className="column is-11">
-                            <p className="is-1 has-text-weight-bold	has-text-black">
-                              {item.title}
-                            </p>
-                            <br />
-                            <p>{item.description}</p>
-                          </div>
-                          <div className="column is-1 is-hidden-mobile">
-                            <FontAwesomeIcon
-                              icon="chevron-right"
-                              style={{ color: "#F18B15" }}
-                            />
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </Link>
-                  <br />
-                </>
-              ))}
+          ))}
+        </div>
+        <Link className="link-align-end" to={approach.callToActionLink}>
+          {approach.callToAction}
+          <span className="icon">
+            <FontAwesomeIcon icon="chevron-right" />
+          </span>
+        </Link>
+      </IndexSection>
+
+      <IndexSection subtitle={testimonials.blurb} title={testimonials.title}>
+        <div className="columns">
+          {testimonials.content.map((item) => (
+            <div className="column testimonial-column">
+              <TestimonialsCard
+                blurb={item.blurb}
+                content={item.description}
+                image={item.image}
+                name={item.name}
+                subtitle={item.subtitle}
+                title={item.title}
+              />
             </div>
-          </div>
-        </IndexSection>
+          ))}
+        </div>
+        <Link className="link-align-end" to={testimonials.callToActionLink}>
+          {testimonials.callToAction}
+          <span className="icon">
+            <FontAwesomeIcon icon="chevron-right" />
+          </span>
+        </Link>
+      </IndexSection>
 
-        <IndexSection subtitle={approach.blurb} title={approach.title}>
-          <div className="columns">
-            {approach.content.map((item) => (
-              <div className="column">
-                <VerticalServicesCard
-                  backgroundImage={item.image}
-                  title={item.title}
-                  subtitle={item.description}
-                />
-              </div>
-            ))}
-          </div>
-          <br />
-          <br />
-          <div className="has-text-right">
-            <Link to={approach.callToActionLink}>
-              <button className="button is-outlined is-primary is-medium">
-                {approach.callToAction}
-                <br />
-                <span className="icon is-small">
-                  <FontAwesomeIcon
-                    icon="chevron-right"
-                    style={{ color: "#F18B15" }}
-                  />
-                </span>
-              </button>
-            </Link>
-          </div>
-        </IndexSection>
-
-        <IndexSection subtitle={testimonials.blurb} title={testimonials.title}>
-          <div className="columns">
-            {testimonials.content.map((item) => (
-              <div className="column testimonial-column">
-                <TestimonialsCard
-                  image={item.image}
-                  name={item.name}
-                  title={item.title}
-                  blurb={item.blurb}
-                  content={item.description}
-                />
-              </div>
-            ))}
-          </div>
-          <br />
-          <br />
-          <div className="has-text-right">
-            <Link to={testimonials.callToActionLink}>
-              <button className="button is-outlined is-primary is-medium">
-                {testimonials.callToAction}
-                <br />
-                <span className="icon is-small">
-                  <FontAwesomeIcon
-                    icon="chevron-right"
-                    style={{ color: "#F18B15" }}
-                  />
-                </span>
-              </button>
-            </Link>
-          </div>
-        </IndexSection>
-
-        <section className="section">
-          <div className="container">
-            <div className="box has-background-dark">
-              <div className="columns is-vcentered section">
-                <div className="column px-6">
-                  <p className="has-text-white title">{consult.title}</p>
+      <section className="section">
+        <div className="container">
+          <div className="box has-background-dark">
+            <div className="section">
+              <div className="columns is-desktop is-vcentered px-4">
+                <div className="column is-two-thirds-desktop is-three-fifths-widescreen">
+                  <p className="title is-2 has-text-light">{consult.title}</p>
                   <p className="has-text-light">{consult.blurb}</p>
                 </div>
-                <div className="column is-narrow has-text-centered px-6">
+                <div className="column" />
+                <div className="column is-narrow has-text-right">
                   <Link to={consult.callToActionLink}>
-                    <button className="button is-outlined is-primary is-medium has-text-weight-semibold">
+                    <button className="button is-primary is-uppercase has-text-weight-bold px-5 py-5">
                       Contact Us
                     </button>
                   </Link>
@@ -164,8 +130,8 @@ const IndexPage = ({ data }) => {
               </div>
             </div>
           </div>
-        </section>
-      </div>
+        </div>
+      </section>
     </Layout>
   );
 };

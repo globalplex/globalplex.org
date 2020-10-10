@@ -5,6 +5,8 @@ $primary: #FF8700;
 
 $title-color: $primary;
 
+$link: $primary;
+
 $card-shadow: 0;
 
 $navbar-background-color: hsl(0, 0%, 21%);
@@ -19,7 +21,15 @@ $tabs-link-hover-color: $primary;
 
 $box-padding: 0;
 
+$section-padding: 5rem 3rem;
+
 @import "~bulma/bulma.sass";
+
+.section {
+  @include mobile {
+    padding: 3rem 1rem;
+  }
+}
 
 body, button, input, select, textarea {
   font-family: inherit;
@@ -84,6 +94,7 @@ section:nth-child(odd) {
 }
 
 .underlined-heading:after {
+  background-color: $primary;
   border: 2px solid $primary;
   content: '';
   display: block;
@@ -92,7 +103,9 @@ section:nth-child(odd) {
 }
 
 .testimonial-column + .testimonial-column {
-  border-left: 1px solid hsl(0, 0%, 86%);
+  @include tablet {
+    border-left: 1px solid hsl(0, 0%, 86%);
+  }
 }
 
 .flex-column {
@@ -106,6 +119,17 @@ section:nth-child(odd) {
 
 .space-between {
   justify-content: space-between;
+}
+
+.index-services-column > article + article {
+  margin-top: 1rem;
+}
+
+.link-align-end {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 .has-boxed-counter {
