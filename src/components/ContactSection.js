@@ -6,7 +6,7 @@ const ContactSection = () => (
     <div className="container">
       <div className="columns is-vcentered is-centered px-6">
         <div className="column is-half is-one-third-widescreen has-text-centered-mobile">
-          <p className="title is-2 has-text-dark">Ready for a consultation?</p>
+          <p className="is-size-3 has-text-dark">Ready for a consultation?</p>
         </div>
         <div className="column is-one-fifth" />
         <div className="column is-narrow has-text-centered-mobile">

@@ -1,7 +1,7 @@
 import React from "react";
 
 const Header = ({ backgroundImage, subtitle, title }) => (
-  <header className="hero has-background">
+  <header className="hero is-relative is-clipped">
     <img className="hero-background" src={backgroundImage} />
     <div className="hero-body">
       <div className="container">

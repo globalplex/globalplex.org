@@ -36,7 +36,7 @@ const ServicesPage = ({ data }) => {
             <div className="container">
               <h1 className="title">{item.title}</h1>
               <p className="subtitle">{item.blurb}</p>
-              <div className="columns is-multiline is-centered">
+              <div className="columns is-multiline is-centered pt-4">
                 {item.topics.map((subitem) => (
                   <div
                     className={`column ${
