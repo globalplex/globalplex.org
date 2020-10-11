@@ -7,7 +7,8 @@ import ContactSection from "../components/ContactSection";
 import ValuesCard from "../components/ValuesCard";
 
 import "../pages/mystyles.scss";
-import ProfileCard from "../components/ProfileCard";
+import FoundersCard from "../components/FoundersCard";
+import TeamCard from "../components/TeamCard";
 
 const AboutPage = ({ data }) => {
   const {
@@ -33,90 +34,84 @@ const AboutPage = ({ data }) => {
           { target: "#about-team", title: "Our Team" },
         ]}
       />
-      <div id="about-story" className="section">
+
+      <section id="about-story" className="section">
         <div className="container">
-          <div className="columns">
-            <div className="column is-two-thirds">
-              <h1 className="title">{story.title}</h1>
+          <h1 className="title">{story.title}</h1>
+          <div className="columns is-vcentered">
+            <div className="column is-two-thirds-desktop is-three-quarters-widescreen">
               <p>{story.description}</p>
             </div>
-            <div className="column">
-              <figure className="image">
+            <div className="column is-hidden-touch">
+              <figure className="image is-3by5">
                 <img src={story.image} alt="About Story" />
               </figure>
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
-      <figure className="image">
-        <img
-          className="is-fullwidth"
-          src={topSeparatorImg}
-          style={{ marginBottom: 0 }}
-          alt="About"
-        />
-      </figure>
+      <section className="hero is-medium is-relative is-clipped">
+        <img className="hero-background" src={topSeparatorImg} />
+        <div className="hero-body" />
+      </section>
 
-      <div className="has-background-white has-text-black">
+      <section className="has-background-white has-text-black">
         <div id="about-values" className="section">
           <div className="container">
-            <h1 className="title">{values.title}</h1>
-            <h2 className="subtitle has-text-centered">{values.blurb}</h2>
-            <br />
-            {values.content.map((item) => (
-              <ValuesCard title={item.title} subtitle={item.description} />
-            ))}
+            <h1 className="title is-spaced">{values.title}</h1>
+            <h2 className="subtitle has-text-centered mb-6">{values.blurb}</h2>
+            <div className="columns is-multiline is-centered">
+              <div className="column is-four-fifths-desktop is-two-thirds-widescreen values-column">
+                {values.content.map((item) => (
+                  <ValuesCard
+                    backgroundImage={item.image}
+                    subtitle={item.description}
+                    title={item.title}
+                  />
+                ))}
+              </div>
+            </div>
           </div>
         </div>
-      </div>
+      </section>
 
-      <div className="has-background-light has-text-black">
-        <div id="about-founders" className="section">
-          <div className="container">
-            <h1 className="title">{founders.title}</h1>
-            <br />
-            {founders.content.map((item) => (
-              <ProfileCard
-                img={item.image}
-                name={item.name}
-                position={item.position}
-                bio={item.description}
-              />
-            ))}
-          </div>
+      <section id="about-founders" className="section">
+        <div className="container founders-container">
+          <h1 className="title pb-5">{founders.title}</h1>
+          {founders.content.map((item) => (
+            <FoundersCard
+              description={item.description}
+              image={item.image}
+              subtitle={item.position}
+              title={item.name}
+            />
+          ))}
         </div>
-      </div>
+      </section>
 
-      <figure className="image">
-        <img
-          className="is-fullwidth"
-          src={bottomSeparatorImg}
-          style={{ marginBottom: 0 }}
-          alt="About"
-        />
-      </figure>
+      <section className="hero is-medium is-relative is-clipped">
+        <img className="hero-background" src={bottomSeparatorImg} />
+        <div className="hero-body" />
+      </section>
 
-      {/*
-      <div id="about-founders" className="section">
+      <section id="about-team" className="section">
         <div className="container">
-          <h1 className="title">{team.title}</h1>
-          <br />
-          <div className="columns">
+          <h1 className="title pb-5">{team.title}</h1>
+          <div className="columns is-multiline">
             {team.content.map((item) => (
-              <div className="column">
-                <ProfileCard
-                  img="../img/github-icon.svg"
-                  name={item.name}
-                  position={item.position}
-                  bio={item.description}
+              <div class="column is-half">
+                <TeamCard
+                  image={item.image}
+                  subtitle={item.position}
+                  title={item.name}
                 />
               </div>
             ))}
           </div>
         </div>
-      </div>
-      */}
+      </section>
+
       <ContactSection />
     </Layout>
   );
@@ -161,7 +156,7 @@ export const query = graphql`
           content {
             name
             position
-            description
+            image
           }
         }
       }

@@ -23,15 +23,15 @@ values:
   title: Our Values
   blurb: The values that guide us in everything that we do.
   content:
-    - image: /img/effectivelyEquipping.png
+    - image: /img/about-equip.png
       title: Effectively equipping
       description: >-
         Our approach is to effectively equip and empower each individual through personal coaching, consistent consultation, and goal-setting accountability
-    - image: /img/excelInLife.png
+    - image: /img/about-excel.png
       title: Excel in life
       description: >-
         Our carefully tailored development services enable you to reach your full potential and help you achieve greater performance and results
-    - image: /img/expandingYourInfluence.png
+    - image: /img/about-expand.png
       title: Expanding your influence
       description: >-
         Our program helps you expand your influence and develop life-long impact within your organization
@@ -61,7 +61,18 @@ team:
   title: Our Team
   content:
     - name: Jacky Lee
-      position: CTO
-      description: >-
-        This is Jacky.
+      position: Chief Technological Officer
+      image: /img/jacky.png
+    - name: Angelica Kosasih
+      position: Design Systems Lead
+      image: /img/angelica.png
+    - name: Bowen Chin
+      position: Senior Software Engineer
+      image: /img/bowen.png
+    - name: Charissa Hung
+      position: Senior UI/UX Designer
+      image: /img/charissa.png
+    - name: Angel Lee
+      position: Senior UI/UX Designer
+      image: /img/angel.png
 ---
