@@ -23,14 +23,14 @@ approach:
   subtitle: Training in multiple levels
   content:
     - image: img/home-individualtraining.png
-      title: One-on-one sessions
-      subtitle: These training sessions are focused on the individual. It is more effective for training soft skills.
+      title: One-on-one Sessions
+      subtitle: These training sessions are focused on the individual. It is more effective for training soft skills
     - image: img/home-teamtraining.png
-      title: Team based trainings
-      subtitle: Used to build leadership and teamwork quailites of your members to work better as a team.
+      title: Team-based Trainings
+      subtitle: Used to build leadership and teamwork quailites of your members to work better as a team
     - image: img/home-corporatetraining.png
-      title: Corporate-wide sessions
-      subtitle: Corporate wide training sessions are most effective at instilling and setting corporate culture.
+      title: Corporate-wide Sessions
+      subtitle: Corporate wide training sessions are most effective at instilling and setting corporate culture
 testimonials:
   title: Testimonials
   subtitle: Join the leaders impacting tomorrow's world
@@ -55,5 +55,5 @@ testimonials:
       description: It's difficult for me to overstate the impact that Seth Kim has on my life both professionally and personally. Through my formative years in graduate school, Seth was a mentor, teacher, and friend and through his investment in my life, I grew to be a leader. I believe one of the greatest attributes of a leader is that success is measured by whom you impact. As a professor, sometimes this impact is obscured because our greatest legacy is our students and their imprint on the world. That my role is to serve my students so that they would surpass me almost seems counterintuitive, yet I find that it motivates me to faithfulness and diligence.
 consult:
   title: Start a free consultation with us now
-  subtitle: Schedule a training session with us or see how we can help you and your team reach your full potential.
+  subtitle: Schedule a training session with us or see how we can help you and your team reach your full potential
 ---

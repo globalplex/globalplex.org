@@ -4,9 +4,9 @@ path: /testimonials
 header:
   image: img/testimonials-header.png
   title: Testimonials
-  subtitle: Training to help you discover and develop your potential.
+  subtitle: Training to help you discover and develop your potential
 content:
-  - title: Leadership and Management
+  - title: Leadership & Management
     subtitle: Develop future-proof leaders through training on core, timeless leadership skills
     testimonials:
       - image: img/testimonials-jackson.png
@@ -45,7 +45,7 @@ content:
       - image: img/testimonials-park.png
         name: Seong W Park
         title: Senior Engineer
-        subtitle: hyundai motors
+        subtitle: Hyundai Motors
         blurb: Stretching oneself towards a goal is the crucible for one's development.
         description: One Leadership/Character trait that Seth has facilitated in me over the years is being true to who I am and standing firm for what I believe. Stretching oneself towards a goal is the crucible for one's development. Seth enables has helped me learn that lesson through successes and failures by keeping focus of the end goal.
   - title: Personal Development
@@ -87,7 +87,7 @@ content:
       - image: img/testimonials-nick.png
         name: Nicholas Chan
         title: Senior Branch Manager - Wealth Management
-        subtitle: manulife HK
-        blurb: Seth showed me the importance of 'doing things differently'
+        subtitle: Manulife HK
+        blurb: Seth showed me the importance of 'doing things differently'.
         description: Seth has always been a great mentor since I started my career as a university graduate, especially when I switched from being a journalist to a wealth management advisor two years ago. It was not easy to be in an industry that I did not study for, which at the same time, was highly competitive. Seth showed me the importance of 'do things differently', which even if I am younger compared to my coworker, I was able to leave memorable impressions to my clients. Also, he always focused on 'the growth mindset' which keeps me motivated for a longer and greater vision instead of short-term achievements.
 ---

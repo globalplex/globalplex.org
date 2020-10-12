@@ -4,7 +4,7 @@ path: /about
 header:
   image: img/about-header.png
   title: About Us
-  subtitle: Meet the people and the values that drive us to do what we do.
+  subtitle: Meet the people and the values that drive us to do what we do
 story:
   image: img/about-story.png
   title: Our Story
@@ -17,30 +17,30 @@ story:
 topDividerImage: img/about-divider.png
 values:
   title: Our Values
-  subtitle: The values that guide us in everything that we do.
+  subtitle: The values that guide us in everything that we do
   cards:
     - image: img/about-equip.png
-      title: Effectively equipping
+      title: Effectively Equipping
       subtitle: Our approach is to effectively equip and empower each individual through personal coaching, consistent consultation, and goal-setting accountability
     - image: img/about-excel.png
-      title: Excel in life
+      title: Excel in Life
       subtitle: Our carefully tailored development services enable you to reach your full potential and help you achieve greater performance and results
     - image: img/about-expand.png
-      title: Expanding your influence
+      title: Expanding Your Influence
       subtitle: Our program helps you expand your influence and develop life-long impact within your organization
 founders:
   title: Our Founders
   cards:
     - image: img/profile-seth.png
       title: Seth S. Kim
-      subtitle: CEO
+      subtitle: Chief Executive Officer
       description: |-
         Dr. Kim has started multiple organizations and is on various executive boards and has key leadership roles in helping to lead, guide, and expand the organizational influence and impact. He is a motivational speaker, leadership educator, a people developer and equipper, and organizational entrepreneur who loves to help people engineer a vision for their lives to make an impact in their sphere of influence.
         He has traveled extensively around the world to work with different organizations to train and equip people to live life with purpose, destiny, and influence. His 28+ years of experience in working with people and conducting training programs for organizations extends to over 30 nations.
         Dr. Kim holds multiple degrees including B.S. in Psychology and Sociology, M.A., and D.Min
     - image: img/profile-joanna.png
       title: Joanna Jing
-      subtitle: COO
+      subtitle: Chief Operating Officer
       description: |-
         Joanna has extensive experience in working with young adults in areas of character development, leadership training and professionalism. She has mentored hundreds of university students and young adults over the past six years.
         She also specializes in corporate change management and efficiency transformation, with experience spanning across corporates such as EY, Citibank, and MetLife.
@@ -51,10 +51,10 @@ team:
   cards:
     - image: img/jacky.png
       title: Jacky Lee
-      subtitle: Chief Technological Officer
+      subtitle: Chief Technology Officer
     - image: img/angelica.png
       title: Angelica Kosasih
-      subtitle: Design Systems Lead
+      subtitle: Product Design Lead
     - image: img/bowen.png
       title: Bowen Chin
       subtitle: Senior Software Engineer

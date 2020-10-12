@@ -4,16 +4,16 @@ path: /services
 header:
   image: img/offer-header.png
   title: Our Services
-  subtitle: Training to help you Discover and Develop your potential.
+  subtitle: Training to help you discover and develop your potential
 content:
   - title: Leadership & Management
     subtitle: Develop future-proof leaders through training on core, timeless leadership skills
     cards:
       - image: img/services-leading.png
-        title: Leading by example
+        title: Leading by Example
         subtitle: Learn to bring your vision and mission to life in your team through your actions
       - image: img/services-influence.png
-        title: The power of influence
+        title: The Power of Influence
         subtitle: Learn to cultivate effective and motivated teams that take pride in their work
       - image: img/services-communication.png
         title: Clear Communication
@@ -22,7 +22,7 @@ content:
     subtitle: Skills that have immediate, real time impact to launch your career to the next level
     cards:
       - image: img/services-profile.png
-        title: Profile building
+        title: Profile Building
         subtitle: Understand how to develop your own plan to gain the experience needed for your dream career
       - image: img/services-project.png
         title: Project Management
@@ -31,10 +31,10 @@ content:
     subtitle: Skills that help you understand yourself and grow so that you can then lead others
     cards:
       - image: img/services-purpose.png
-        title: Living with purpose
+        title: Living with Purpose
         subtitle: Learn how to identify your personal mission statement and discover your calling
       - image: img/services-interpersonal.png
-        title: Building interpersonal relationships
+        title: Building Interpersonal Relationships
         subtitle: Grow genuine connections and develop healthy, balanced relationships
       - image: img/services-eq.png
         title: Emotional Intelligence
@@ -50,7 +50,7 @@ content:
         subtitle: Learn how to efficiently navigate between conflicts such that teams foster deeper unity
 formats:
   image: img/offer-format.png
-  title: Customizable training available in multiple formats.
+  title: Customizable training available in multiple formats
   ways:
     - In-person
     - On-site
