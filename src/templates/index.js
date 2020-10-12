@@ -1,17 +1,19 @@
 import React from "react";
 import { graphql, Link } from "gatsby";
-import Layout from "../components/Layout";
-import TestimonialsCard from "../components/TestimonialsCard";
-import VerticalServicesCard from "../components/VerticalServicesCard";
-import IndexServicesCard from "../components/IndexServicesCard";
-import IndexSection from "../components/IndexSection";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import "../utils/fontawesome";
+
+import Layout from "../components/Layout";
+import IndexSection from "../components/IndexSection";
+import IndexServicesCard from "../components/IndexServicesCard";
+import VerticalServicesCard from "../components/VerticalServicesCard";
+import TestimonialsCard from "../components/TestimonialsCard";
 import "../pages/mystyles.scss";
+import "../utils/fontawesome";
+import { getId } from "../utils/functions";
 
 const IndexPage = ({ data }) => {
   const {
-    landing,
+    header,
     services,
     approach,
     testimonials,
@@ -21,24 +23,19 @@ const IndexPage = ({ data }) => {
   return (
     <Layout>
       <header className="hero is-large is-relative is-clipped">
-        <img
-          alt="Banner background image"
-          className="hero-background"
-          src="../img/home-cover.jpg"
-        />
+        <img alt="" className="hero-background" src={header.image} />
         <div className="hero-body">
           <div className="container py-6">
             <div className="columns has-text-centered-mobile">
               <div className="column is-four-fifths is-half-widescreen">
-                <p className="title is-size-1 is-spaced has-text-weight-light has-text-light">
-                  {landing.title}
+                <p className="title is-1 is-spaced has-text-weight-light has-text-light">
+                  {header.title}
                 </p>
-                <p className="subtitle has-text-light">
-                  Our mission is to effectively equip people to excel in life
-                  and expand their influence
+                <p className="subtitle has-text-light pb-2">
+                  {header.subtitle}
                 </p>
                 <Link to="/contact">
-                  <button className="button is-primary is-uppercase has-text-weight-bold mt-2 px-5 py-5">
+                  <button className="button is-primary is-uppercase has-text-weight-bold px-5 py-5">
                     Contact Us
                   </button>
                 </Link>
@@ -47,63 +44,54 @@ const IndexPage = ({ data }) => {
           </div>
         </div>
       </header>
+
       <section />
 
-      <IndexSection subtitle={services.blurb} title={services.title}>
+      <IndexSection subtitle={services.subtitle} title={services.title}>
         <div className="columns is-desktop is-vcentered">
           <div className="column is-hidden-touch is-one-third-fullhd">
             <figure className="image is-square">
-              <img src={services.image} />
+              <img alt="" src={services.image} />
             </figure>
           </div>
           <div className="column index-services-column">
             {services.content.map((item) => (
-              <IndexServicesCard
-                subtitle={item.description}
-                title={item.title}
-              />
+              <div>
+                <Link to={`/services#${getId(item.title)}`}>
+                  <IndexServicesCard {...item} />
+                </Link>
+              </div>
             ))}
           </div>
         </div>
       </IndexSection>
 
-      <IndexSection subtitle={approach.blurb} title={approach.title}>
+      <IndexSection subtitle={approach.subtitle} title={approach.title}>
         <div className="columns">
           {approach.content.map((item) => (
             <div className="column">
-              <VerticalServicesCard
-                backgroundImage={item.image}
-                title={item.title}
-                subtitle={item.description}
-              />
+              <VerticalServicesCard {...item} />
             </div>
           ))}
         </div>
-        <Link className="link-align-end" to={approach.callToActionLink}>
-          {approach.callToAction}
+        <Link className="link-align-end" to="/contact">
+          Contact us to learn more
           <span className="icon">
             <FontAwesomeIcon icon="chevron-right" />
           </span>
         </Link>
       </IndexSection>
 
-      <IndexSection subtitle={testimonials.blurb} title={testimonials.title}>
+      <IndexSection subtitle={testimonials.subtitle} title={testimonials.title}>
         <div className="columns">
           {testimonials.content.map((item) => (
             <div className="column testimonial-column">
-              <TestimonialsCard
-                blurb={item.blurb}
-                content={item.description}
-                image={item.image}
-                name={item.name}
-                subtitle={item.subtitle}
-                title={item.title}
-              />
+              <TestimonialsCard {...item} />
             </div>
           ))}
         </div>
-        <Link className="link-align-end" to={testimonials.callToActionLink}>
-          {testimonials.callToAction}
+        <Link className="link-align-end" to="/testimonials">
+          See more testimonials
           <span className="icon">
             <FontAwesomeIcon icon="chevron-right" />
           </span>
@@ -117,11 +105,11 @@ const IndexPage = ({ data }) => {
               <div className="columns is-desktop is-vcentered px-4">
                 <div className="column is-two-thirds-desktop is-three-fifths-widescreen">
                   <p className="title is-2 has-text-light">{consult.title}</p>
-                  <p className="has-text-light">{consult.blurb}</p>
+                  <p className="has-text-light">{consult.subtitle}</p>
                 </div>
                 <div className="column" />
                 <div className="column is-narrow has-text-right">
-                  <Link to={consult.callToActionLink}>
+                  <Link to="/contact">
                     <button className="button is-primary is-uppercase has-text-weight-bold px-5 py-5">
                       Contact Us
                     </button>
@@ -142,36 +130,32 @@ export const query = graphql`
   query IndexPage($path: String!) {
     markdownRemark(frontmatter: { path: { eq: $path } }) {
       frontmatter {
-        landing {
-          title
-          description
-          blurb
+        header {
           image
+          title
+          subtitle
         }
         services {
-          title
-          blurb
           image
+          title
+          subtitle
           content {
             title
-            link
-            description
+            subtitle
           }
         }
         approach {
           title
-          blurb
+          subtitle
           content {
             image
             title
-            description
+            subtitle
           }
-          callToAction
-          callToActionLink
         }
         testimonials {
           title
-          blurb
+          subtitle
           content {
             image
             name
@@ -180,13 +164,10 @@ export const query = graphql`
             blurb
             description
           }
-          callToAction
-          callToActionLink
         }
         consult {
           title
-          blurb
-          callToActionLink
+          subtitle
         }
       }
     }

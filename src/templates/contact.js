@@ -1,10 +1,11 @@
 import React from "react";
 import { graphql } from "gatsby";
+
 import Layout from "../components/Layout";
 import "../pages/mystyles.scss";
 
 const ContactPage = ({ data }) => {
-  const { title, blurb, sampleQuestions } = data.markdownRemark.frontmatter;
+  const { title, subtitle, sampleQuestions } = data.markdownRemark.frontmatter;
 
   return (
     <Layout>
@@ -12,10 +13,11 @@ const ContactPage = ({ data }) => {
         <div className="hero-body">
           <div className="container">
             <h1 className="title">{title}</h1>
-            <p>{blurb}</p>
+            <p>{subtitle}</p>
           </div>
         </div>
       </section>
+
       <section className="section">
         <div className="container">
           <div className="columns is-desktop">
@@ -28,11 +30,15 @@ const ContactPage = ({ data }) => {
               >
                 <input type="hidden" name="bot-field" />
                 <input type="hidden" name="form-name" value="contact" />
+
                 <div className="field">
-                  <label className="label">Name</label>
+                  <label className="label" htmlFor="name">
+                    Name
+                  </label>
                   <div className="control">
                     <input
                       className="input"
+                      id="name"
                       name="name"
                       placeholder="Your Name"
                       type="text"
@@ -41,10 +47,13 @@ const ContactPage = ({ data }) => {
                 </div>
 
                 <div className="field">
-                  <label className="label">Email</label>
+                  <label className="label" htmlFor="email">
+                    Email
+                  </label>
                   <div className="control">
                     <input
                       className="input"
+                      id="email"
                       name="email"
                       placeholder="Your Email"
                       type="email"
@@ -53,10 +62,13 @@ const ContactPage = ({ data }) => {
                 </div>
 
                 <div className="field">
-                  <label className="label">Company / Organization</label>
+                  <label className="label" htmlFor="organization">
+                    Company / Organization
+                  </label>
                   <div className="control">
                     <input
                       className="input"
+                      id="organization"
                       name="organization"
                       placeholder="Your Organization"
                       type="text"
@@ -65,13 +77,16 @@ const ContactPage = ({ data }) => {
                 </div>
 
                 <div className="field">
-                  <label className="label">Message</label>
+                  <label className="label" htmlFor="message">
+                    Message
+                  </label>
                   <div className="control">
                     <textarea
                       className="textarea"
+                      id="message"
                       name="message"
                       placeholder="Drop us a line!"
-                    ></textarea>
+                    />
                   </div>
                 </div>
 
@@ -87,7 +102,7 @@ const ContactPage = ({ data }) => {
             <div className="column" />
             <div className="column is-half-desktop is-two-fifths-widescreen">
               <div className="section">
-                <h3 className="title has-text-dark">{sampleQuestions.title}</h3>
+                <h2 className="title has-text-dark">{sampleQuestions.title}</h2>
                 {sampleQuestions.questions.map((item) => (
                   <p>{item}</p>
                 ))}
@@ -107,15 +122,10 @@ export const query = graphql`
     markdownRemark(frontmatter: { path: { eq: $path } }) {
       frontmatter {
         title
-        blurb
+        subtitle
         sampleQuestions {
           title
           questions
-        }
-        faqTitle
-        faq {
-          question
-          answer
         }
       }
     }

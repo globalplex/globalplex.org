@@ -1,6 +1,6 @@
 import React from "react";
 
-const HorizontalServicesCard = ({ backgroundImage, subtitle, title }) => (
+const HorizontalServicesCard = ({ image, subtitle, title }) => (
   <article className="card card-border">
     <div className="columns is-gapless">
       <div className="column">
@@ -14,7 +14,7 @@ const HorizontalServicesCard = ({ backgroundImage, subtitle, title }) => (
       <div className="column">
         <div className="card-image">
           <figure className="image is-4by3">
-            <img src={backgroundImage} />
+            <img alt="" src={image} />
           </figure>
         </div>
       </div>

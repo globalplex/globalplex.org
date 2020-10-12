@@ -1,13 +1,20 @@
 import React, { useState } from "react";
 
-const TestimonialsCard = ({ blurb, content, image, name, subtitle, title }) => {
+const TestimonialsCard = ({
+  blurb,
+  description,
+  image,
+  name,
+  subtitle,
+  title,
+}) => {
   const [isActive, setIsActive] = useState(false);
 
   return (
     <div className="card is-full-height flex-column">
       <div className="card-image">
         <figure className="image is-4by3">
-          <img src={image} />
+          <img alt={name} src={image} />
         </figure>
       </div>
       <div className="card-content has-text-centered flex-grow">
@@ -21,7 +28,7 @@ const TestimonialsCard = ({ blurb, content, image, name, subtitle, title }) => {
             </p>
           </div>
           <div>
-            <p className="has-text-weight-bold py-4">{blurb}</p>
+            <p className="has-text-weight-bold py-4">"{blurb}"</p>
             <button
               className="button is-small is-primary is-outlined"
               onClick={() => setIsActive(true)}
@@ -40,8 +47,12 @@ const TestimonialsCard = ({ blurb, content, image, name, subtitle, title }) => {
       >
         <div className="is-overlay is-scrollable">
           <div className="notification is-radiusless is-min-full-height is-primary is-light has-text-dark">
-            <button className="delete" onClick={() => setIsActive(false)} />
-            <p>{content}</p>
+            <button
+              aria-label="Delete"
+              className="delete"
+              onClick={() => setIsActive(false)}
+            />
+            <p>{description}</p>
           </div>
         </div>
       </div>

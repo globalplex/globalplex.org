@@ -2,10 +2,10 @@ import React from "react";
 
 const TeamCard = ({ image, subtitle, title }) => (
   <article className="is-clearfix">
-    <div className="columns is-vcentered is-mobile">
+    <div className="columns is-mobile is-vcentered">
       <div className="column is-narrow ml-2">
         <figure className="image is-160x160">
-          <img className="is-rounded" src={image} />
+          <img alt={title} className="is-rounded" src={image} />
         </figure>
       </div>
       <div className="column">

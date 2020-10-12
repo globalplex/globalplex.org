@@ -11,16 +11,21 @@ const Navbar = () => {
       <div className="container">
         <div className="navbar-brand">
           <Link className="navbar-item" to="/">
-            <img src={logo} alt="Globalplex" />
+            <img alt="Globalplex logo" src={logo} />
           </Link>
           <div
+            aria-expanded="false"
+            aria-label="menu"
             className={`navbar-burger ${isActive && "is-active"}`}
             data-target="navbar-menu"
             onClick={() => setIsActive(!isActive)}
+            onKeyPress={() => setIsActive(!isActive)}
+            role="button"
+            tabIndex="0"
           >
-            <span />
-            <span />
-            <span />
+            <span aria-hidden="true" />
+            <span aria-hidden="true" />
+            <span aria-hidden="true" />
           </div>
         </div>
         <div

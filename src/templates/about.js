@@ -1,50 +1,61 @@
 import React from "react";
 import { graphql } from "gatsby";
+
 import Layout from "../components/Layout";
 import Header from "../components/Header";
 import Tabs from "../components/Tabs";
-import ContactSection from "../components/ContactSection";
 import ValuesCard from "../components/ValuesCard";
-
-import "../pages/mystyles.scss";
 import FoundersCard from "../components/FoundersCard";
 import TeamCard from "../components/TeamCard";
+import ContactSection from "../components/ContactSection";
+import "../pages/mystyles.scss";
+import { formatParagraph, getId } from "../utils/functions";
 
 const AboutPage = ({ data }) => {
   const {
-    title,
-    blurb,
-    image,
+    header,
     story,
-    topSeparatorImg,
+    topDividerImage,
     values,
     founders,
-    bottomSeparatorImg,
+    bottomDividerImage,
     team,
   } = data.markdownRemark.frontmatter;
 
   return (
     <Layout>
-      <Header title={title} subtitle={blurb} backgroundImage={image} />
+      <Header {...header} />
       <Tabs
         data={[
-          { target: "#about-story", title: "Our Story" },
-          { target: "#about-founders", title: "Our Founders" },
-          { target: "#about-values", title: "Our Values" },
-          { target: "#about-team", title: "Our Team" },
+          {
+            target: `/about#${getId(story.title)}`,
+            title: story.title,
+          },
+          {
+            target: `/about#${getId(founders.title)}`,
+            title: founders.title,
+          },
+          {
+            target: `/about#${getId(values.title)}`,
+            title: values.title,
+          },
+          {
+            target: `/about#${getId(team.title)}`,
+            title: team.title,
+          },
         ]}
       />
 
-      <section id="about-story" className="section">
+      <section className="section" id={getId(story.title)}>
         <div className="container">
           <h1 className="title">{story.title}</h1>
           <div className="columns is-vcentered">
-            <div className="column is-two-thirds-desktop is-three-quarters-widescreen">
-              <p>{story.description}</p>
+            <div className="column is-three-quarters-widescreen">
+              {formatParagraph(story.description)}
             </div>
-            <div className="column is-hidden-touch">
-              <figure className="image is-3by5">
-                <img src={story.image} alt="About Story" />
+            <div className="column is-hidden-touch is-hidden-desktop-only">
+              <figure className="image is-9by16">
+                <img alt="" src={story.image} />
               </figure>
             </div>
           </div>
@@ -52,60 +63,45 @@ const AboutPage = ({ data }) => {
       </section>
 
       <section className="hero is-medium is-relative is-clipped">
-        <img className="hero-background" src={topSeparatorImg} />
+        <img alt="" className="hero-background" src={topDividerImage} />
         <div className="hero-body" />
       </section>
 
-      <section className="has-background-white has-text-black">
-        <div id="about-values" className="section">
-          <div className="container">
-            <h1 className="title is-spaced">{values.title}</h1>
-            <h2 className="subtitle has-text-centered mb-6">{values.blurb}</h2>
-            <div className="columns is-multiline is-centered">
-              <div className="column is-four-fifths-desktop is-two-thirds-widescreen values-column">
-                {values.content.map((item) => (
-                  <ValuesCard
-                    backgroundImage={item.image}
-                    subtitle={item.description}
-                    title={item.title}
-                  />
-                ))}
-              </div>
+      <section className="section" id={getId(values.title)}>
+        <div className="container">
+          <h1 className="title is-spaced">{values.title}</h1>
+          <p className="subtitle has-text-centered mb-6">{values.subtitle}</p>
+          <div className="columns is-multiline is-centered">
+            <div className="column is-four-fifths-desktop is-two-thirds-widescreen values-column">
+              {values.cards.map((item) => (
+                <ValuesCard {...item} />
+              ))}
             </div>
           </div>
         </div>
       </section>
 
-      <section id="about-founders" className="section">
+      <section className="section" id={getId(founders.title)}>
         <div className="container founders-container">
           <h1 className="title pb-5">{founders.title}</h1>
-          {founders.content.map((item) => (
-            <FoundersCard
-              description={item.description}
-              image={item.image}
-              subtitle={item.position}
-              title={item.name}
-            />
+          {founders.cards.map((item) => (
+            <FoundersCard {...item} />
           ))}
         </div>
       </section>
 
       <section className="hero is-medium is-relative is-clipped">
-        <img className="hero-background" src={bottomSeparatorImg} />
+        <img alt="" className="hero-background" src={bottomDividerImage} />
         <div className="hero-body" />
       </section>
 
-      <section id="about-team" className="section">
+      <section className="section" id={getId(team.title)}>
         <div className="container">
           <h1 className="title pb-5">{team.title}</h1>
           <div className="columns is-multiline">
-            {team.content.map((item) => (
+            {team.cards.map((item) => (
               <div class="column is-half">
-                <TeamCard
-                  image={item.image}
-                  subtitle={item.position}
-                  title={item.name}
-                />
+                <TeamCard {...item} />
               </div>
             ))}
           </div>
@@ -123,40 +119,42 @@ export const query = graphql`
   query AboutPage($path: String!) {
     markdownRemark(frontmatter: { path: { eq: $path } }) {
       frontmatter {
-        title
-        blurb
-        image
-        story {
-          title
+        header {
           image
+          title
+          subtitle
+        }
+        story {
+          image
+          title
           description
         }
-        topSeparatorImg
+        topDividerImage
         values {
           title
-          blurb
-          content {
+          subtitle
+          cards {
             image
             title
-            description
+            subtitle
           }
         }
         founders {
           title
-          content {
-            name
-            position
+          cards {
             image
+            title
+            subtitle
             description
           }
         }
-        bottomSeparatorImg
+        bottomDividerImage
         team {
           title
-          content {
-            name
-            position
+          cards {
             image
+            title
+            subtitle
           }
         }
       }

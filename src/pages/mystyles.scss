@@ -23,7 +23,7 @@ $box-padding: 0;
 
 $section-padding: 5rem 3rem;
 
-$dimensions: 16 24 32 48 64 96 128 160 256;
+$dimensions: 160 256;
 
 @import "~bulma/bulma.sass";
 
@@ -35,6 +35,10 @@ $dimensions: 16 24 32 48 64 96 128 160 256;
 
 body, button, input, select, textarea {
   font-family: inherit;
+}
+
+p + p {
+  margin-top: 0.75rem;
 }
 
 .navbar-item img {
@@ -118,7 +122,7 @@ section:nth-child(odd) {
   justify-content: space-between;
 }
 
-.index-services-column > article + article {
+.index-services-column > div + div {
   margin-top: 1rem;
 }
 
