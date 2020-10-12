@@ -22,8 +22,12 @@ const IndexPage = ({ data }) => {
 
   return (
     <Layout>
-      <header className="hero is-large is-relative is-clipped">
-        <img alt="" className="hero-background" src={header.image} />
+      <header className="hero is-large has-background-dark is-relative is-clipped">
+        <img
+          alt=""
+          className="hero-background is-transparent"
+          src={header.image}
+        />
         <div className="hero-body">
           <div className="container py-6">
             <div className="columns has-text-centered-mobile">

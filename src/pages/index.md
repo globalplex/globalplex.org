@@ -2,7 +2,7 @@
 templateKey: index
 path: /
 header:
-  image: img/home-cover.jpg
+  image: img/home-cover.png
   title: Discover and Develop your Potential
   subtitle: Our mission is to effectively equip people to excel in life and expand their influence
 services:
