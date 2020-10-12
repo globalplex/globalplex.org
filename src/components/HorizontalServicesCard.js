@@ -1,7 +1,7 @@
 import React from "react";
 
 const HorizontalServicesCard = ({ image, subtitle, title }) => (
-  <article className="card card-border">
+  <article className="card card-border card-max">
     <div className="columns is-gapless">
       <div className="column">
         <div className="card-content">

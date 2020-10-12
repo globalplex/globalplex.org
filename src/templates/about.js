@@ -69,7 +69,7 @@ const AboutPage = ({ data }) => {
 
       <section className="section" id={getId(values.title)}>
         <div className="container">
-          <h1 className="title is-spaced">{values.title}</h1>
+          <h1 className="title has-text-centered">{values.title}</h1>
           <p className="subtitle has-text-centered mb-6">{values.subtitle}</p>
           <div className="columns is-multiline is-centered">
             <div className="column is-four-fifths-desktop is-two-thirds-widescreen values-column">
@@ -97,10 +97,10 @@ const AboutPage = ({ data }) => {
 
       <section className="section" id={getId(team.title)}>
         <div className="container">
-          <h1 className="title pb-5">{team.title}</h1>
-          <div className="columns is-multiline">
+          <h1 className="title has-text-centered pb-5">{team.title}</h1>
+          <div className="columns is-multiline is-centered">
             {team.cards.map((item) => (
-              <div class="column is-half">
+              <div class="column is-one-third">
                 <TeamCard {...item} />
               </div>
             ))}

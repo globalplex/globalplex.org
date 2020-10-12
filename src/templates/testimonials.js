@@ -28,7 +28,7 @@ const TestimonialsPage = ({ data }) => {
             <div className="container">
               <h1 className="title">{item.title}</h1>
               <p className="subtitle">{item.subtitle}</p>
-              <div className="columns">
+              <div className="columns testimonial-columns">
                 {item.testimonials.map((testimonial) => (
                   <div className="column testimonial-column">
                     <TestimonialsCard {...testimonial} />

@@ -10,10 +10,11 @@ const ContactSection = () => (
         </div>
         <div className="column is-one-fifth" />
         <div className="column is-narrow has-text-centered-mobile">
-          <Link to="/contact">
-            <button className="button is-primary is-uppercase has-text-weight-bold px-6 py-5">
-              Contact Us
-            </button>
+          <Link
+            className="button is-primary is-uppercase has-text-weight-bold px-6 py-5"
+            to="/contact"
+          >
+            Contact Us
           </Link>
         </div>
       </div>

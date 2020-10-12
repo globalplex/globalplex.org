@@ -34,10 +34,11 @@ const IndexPage = ({ data }) => {
                 <p className="subtitle has-text-light pb-2">
                   {header.subtitle}
                 </p>
-                <Link to="/contact">
-                  <button className="button is-primary is-uppercase has-text-weight-bold px-5 py-5">
-                    Contact Us
-                  </button>
+                <Link
+                  className="button is-primary is-uppercase has-text-weight-bold px-5 py-5"
+                  to="/contact"
+                >
+                  Contact Us
                 </Link>
               </div>
             </div>
@@ -83,7 +84,7 @@ const IndexPage = ({ data }) => {
       </IndexSection>
 
       <IndexSection subtitle={testimonials.subtitle} title={testimonials.title}>
-        <div className="columns">
+        <div className="columns testimonial-columns">
           {testimonials.content.map((item) => (
             <div className="column testimonial-column">
               <TestimonialsCard {...item} />
@@ -109,10 +110,11 @@ const IndexPage = ({ data }) => {
                 </div>
                 <div className="column" />
                 <div className="column is-narrow has-text-right">
-                  <Link to="/contact">
-                    <button className="button is-primary is-uppercase has-text-weight-bold px-5 py-5">
-                      Contact Us
-                    </button>
+                  <Link
+                    className="button is-primary is-uppercase has-text-weight-bold px-5 py-5"
+                    to="/contact"
+                  >
+                    Contact Us
                   </Link>
                 </div>
               </div>

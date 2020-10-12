@@ -84,6 +84,13 @@ section:nth-child(odd) {
   border: 1px solid hsl(0, 0%, 86%);
 }
 
+.card-max {
+  @include mobile {
+    margin: auto;
+    max-width: 400px;
+  }
+}
+
 .align-end {
   align-items: flex-end;
   display: flex;
@@ -101,6 +108,11 @@ section:nth-child(odd) {
   display: block;
   margin-top: 0.5rem;
   width: 3rem;
+}
+
+.testimonial-columns {
+  margin: auto;
+  max-width: 1000px;
 }
 
 .testimonial-column + .testimonial-column {
@@ -174,4 +186,8 @@ section:nth-child(odd) {
     float: left;
     margin-right: 1rem;
   }
+}
+
+.ma {
+  margin: auto;
 }

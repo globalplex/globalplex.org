@@ -11,7 +11,7 @@ const TestimonialsCard = ({
   const [isActive, setIsActive] = useState(false);
 
   return (
-    <div className="card is-full-height flex-column">
+    <div className="card card-max is-full-height flex-column">
       <div className="card-image">
         <figure className="image is-4by3">
           <img alt={name} src={image} />
@@ -29,6 +29,8 @@ const TestimonialsCard = ({
           </div>
           <div>
             <p className="has-text-weight-bold py-4">"{blurb}"</p>
+          </div>
+          <div>
             <button
               className="button is-small is-primary is-outlined"
               onClick={() => setIsActive(true)}
