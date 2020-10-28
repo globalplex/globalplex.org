@@ -27,5 +27,6 @@ module.exports = {
         fonts: [`Muli\:700`, `Montserrat\:400,700`],
       },
     },
+    "gatsby-plugin-netlify-cms",
   ],
 };
