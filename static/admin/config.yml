@@ -13,39 +13,190 @@ collections:
         label: Index Page
         name: index
         fields:
-          - label: Template Key
-            name: templateKey
-            widget: hidden
-            default: index
+          - label: Header
+            name: header
+            widget: object
+            fields:
+              - { label: Image, name: image, widget: image }
+              - { label: Title, name: title, widget: string }
+              - { label: Subtitle, name: subtitle, widget: string }
+          - label: Services
+            name: services
+            widget: object
+            fields:
+              - { label: Image, name: image, widget: image }
+              - { label: Title, name: title, widget: string }
+              - { label: Subtitle, name: subtitle, widget: string }
+              - label: Content
+                name: content
+                widget: list
+                fields:
+                  - { label: Title, name: title, widget: string }
+                  - { label: Subtitle, name: subtitle, widget: string }
+          - label: Approach
+            name: approach
+            widget: object
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Subtitle, name: subtitle, widget: string }
+              - label: Content
+                name: content
+                widget: list
+                fields:
+                  - { label: Image, name: image, widget: image }
+                  - { label: Title, name: title, widget: string }
+                  - { label: Subtitle, name: subtitle, widget: string }
+          - label: Testimonials
+            name: testimonials
+            widget: object
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Subtitle, name: subtitle, widget: string }
+              - label: Content
+                name: content
+                widget: list
+                fields:
+                  - { label: Image, name: image, widget: image }
+                  - { label: Name, name: name, widget: string }
+                  - { label: Title, name: title, widget: string }
+                  - { label: Subtitle, name: subtitle, widget: string }
+                  - { label: Blurb, name: blurb, widget: string }
+                  - { label: Description, name: description, widget: text }
+          - label: Consult
+            name: consult
+            widget: object
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Subtitle, name: subtitle, widget: string }
       - file: src/pages/about.md
         label: About Page
         name: about
         fields:
-          - label: Template Key
-            name: templateKey
-            widget: hidden
-            default: about
+          - label: Header
+            name: header
+            widget: object
+            fields:
+              - { label: Image, name: image, widget: image }
+              - { label: Title, name: title, widget: string }
+              - { label: Subtitle, name: subtitle, widget: string }
+          - label: Story
+            name: story
+            widget: object
+            fields:
+              - { label: Image, name: image, widget: image }
+              - { label: Title, name: title, widget: string }
+              - { label: Description, name: description, widget: text }
+          - label: Top Divider Image
+            name: topDividerImage
+            widget: image
+          - label: Values
+            name: values
+            widget: object
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Subtitle, name: subtitle, widget: string }
+              - label: Cards
+                name: cards
+                widget: list
+                fields:
+                  - { label: Image, name: image, widget: image }
+                  - { label: Title, name: title, widget: string }
+                  - { label: Subtitle, name: subtitle, widget: string }
+          - label: Founders
+            name: founders
+            widget: object
+            fields:
+              - { label: Title, name: title, widget: string }
+              - label: Cards
+                name: cards
+                widget: list
+                fields:
+                  - { label: Image, name: image, widget: image }
+                  - { label: Title, name: title, widget: string }
+                  - { label: Subtitle, name: subtitle, widget: string }
+                  - { label: Description, name: description, widget: text }
+          - label: Bottom Divider Image
+            name: bottomDividerImage
+            widget: image
+          - label: Team
+            name: team
+            widget: object
+            fields:
+              - { label: Title, name: title, widget: string }
+              - label: Cards
+                name: cards
+                widget: list
+                fields:
+                  - { label: Image, name: image, widget: image }
+                  - { label: Title, name: title, widget: string }
+                  - { label: Subtitle, name: subtitle, widget: string }
       - file: src/pages/services.md
         label: Services Page
         name: services
         fields:
-          - label: Template Key
-            name: templateKey
-            widget: hidden
-            default: services
+          - label: Header
+            name: header
+            widget: object
+            fields:
+              - { label: Image, name: image, widget: image }
+              - { label: Title, name: title, widget: string }
+              - { label: Subtitle, name: subtitle, widget: string }
+          - label: Content
+            name: content
+            widget: list
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Subtitle, name: subtitle, widget: string }
+              - label: Cards
+                name: cards
+                widget: list
+                fields:
+                  - { label: Image, name: image, widget: image }
+                  - { label: Title, name: title, widget: string }
+                  - { label: Subtitle, name: subtitle, widget: string }
+          - label: Formats
+            name: formats
+            widget: object
+            fields:
+              - { label: Image, name: image, widget: image }
+              - { label: Title, name: title, widget: string }
+              - { label: Ways, name: ways, widget: list }
       - file: src/pages/testimonials.md
         label: Testimonials Page
         name: testimonials
         fields:
-          - label: Template Key
-            name: templateKey
-            widget: hidden
-            default: testimonials
+          - label: Header
+            name: header
+            widget: object
+            fields:
+              - { label: Image, name: image, widget: image }
+              - { label: Title, name: title, widget: string }
+              - { label: Subtitle, name: subtitle, widget: string }
+          - label: Content
+            name: content
+            widget: list
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Subtitle, name: subtitle, widget: string }
+              - label: Testimonials
+                name: testimonials
+                widget: list
+                fields:
+                  - { label: Image, name: image, widget: image }
+                  - { label: Name, name: name, widget: string }
+                  - { label: Title, name: title, widget: string }
+                  - { label: Subtitle, name: subtitle, widget: string }
+                  - { label: Blurb, name: blurb, widget: string }
+                  - { label: Description, name: description, widget: text }
       - file: src/pages/contact.md
         label: Contact Page
         name: contact
         fields:
-          - label: Template Key
-            name: templateKey
-            widget: hidden
-            default: contact
+          - { label: Title, name: title, widget: string }
+          - { label: Subtitle, name: subtitle, widget: string }
+          - label: Sample Questions
+            name: sampleQuestions
+            widget: object
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Questions, name: questions, widget: list }
