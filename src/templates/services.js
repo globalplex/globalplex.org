@@ -10,68 +10,70 @@ import ContactSection from "../components/ContactSection";
 import "../pages/mystyles.scss";
 import { getId } from "../utils/functions";
 
-const ServicesPage = ({ data }) => {
-  const { header, content, formats } = data.markdownRemark.frontmatter;
+export const ServicesPageTemplate = ({ header, content, formats }) => (
+  <>
+    <Header {...header} />
+    <Tabs
+      data={content.map((item) => ({
+        target: `/services#${getId(item.title)}`,
+        title: item.title,
+      }))}
+    />
 
-  return (
-    <Layout>
-      <Header {...header} />
-      <Tabs
-        data={content.map((item) => ({
-          target: `/services#${getId(item.title)}`,
-          title: item.title,
-        }))}
-      />
-
-      {content.map((item) => {
-        const ServicesCard =
-          item.cards.length < 3 ? HorizontalServicesCard : VerticalServicesCard;
-        return (
-          <section className="section" id={getId(item.title)}>
-            <div className="container">
-              <h1 className="title">{item.title}</h1>
-              <p className="subtitle">{item.subtitle}</p>
-              <div className="columns is-multiline is-centered pt-4">
-                {item.cards.map((card) => (
-                  <div
-                    className={`column ${
-                      item.cards.length < 3 &&
-                      "is-four-fifths-tablet is-half-widescreen"
-                    }`}
-                  >
-                    <ServicesCard {...card} />
-                  </div>
-                ))}
-              </div>
+    {content.map((item) => {
+      const ServicesCard =
+        item.cards.length < 3 ? HorizontalServicesCard : VerticalServicesCard;
+      return (
+        <section className="section" id={getId(item.title)}>
+          <div className="container">
+            <h1 className="title">{item.title}</h1>
+            <p className="subtitle">{item.subtitle}</p>
+            <div className="columns is-multiline is-centered pt-4">
+              {item.cards.map((card) => (
+                <div
+                  className={`column ${
+                    item.cards.length < 3 &&
+                    "is-four-fifths-tablet is-half-widescreen"
+                  }`}
+                >
+                  <ServicesCard {...card} />
+                </div>
+              ))}
             </div>
-          </section>
-        );
-      })}
-
-      <section>
-        <div className="columns is-desktop is-gapless is-vcentered has-background-dark">
-          <div className="column is-hidden-touch is-two-fifths-widescreen is-one-third-fullhd">
-            <figure className="image is-5by4">
-              <img alt="" src={formats.image} />
-            </figure>
           </div>
-          <div className="column">
-            <div className="section px-6">
-              <p className="title is-3 has-text-light">{formats.title}</p>
-              <ol className="has-boxed-counter">
-                {formats.ways.map((item) => (
-                  <li className="is-size-5 has-text-light">{item}</li>
-                ))}
-              </ol>
-            </div>
+        </section>
+      );
+    })}
+
+    <section>
+      <div className="columns is-desktop is-gapless is-vcentered has-background-dark">
+        <div className="column is-hidden-touch is-two-fifths-widescreen is-one-third-fullhd">
+          <figure className="image is-5by4">
+            <img alt="" src={formats.image} />
+          </figure>
+        </div>
+        <div className="column">
+          <div className="section px-6">
+            <p className="title is-3 has-text-light">{formats.title}</p>
+            <ol className="has-boxed-counter">
+              {formats.ways.map((item) => (
+                <li className="is-size-5 has-text-light">{item}</li>
+              ))}
+            </ol>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <ContactSection />
-    </Layout>
-  );
-};
+    <ContactSection />
+  </>
+);
+
+const ServicesPage = ({ data }) => (
+  <Layout>
+    <ServicesPageTemplate {...data.markdownRemark.frontmatter} />
+  </Layout>
+);
 
 export default ServicesPage;
 

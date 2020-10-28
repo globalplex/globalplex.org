@@ -27,6 +27,11 @@ module.exports = {
         fonts: [`Muli\:700`, `Montserrat\:400,700`],
       },
     },
-    "gatsby-plugin-netlify-cms",
+    {
+      resolve: "gatsby-plugin-netlify-cms",
+      options: {
+        modulePath: `${__dirname}/src/cms/cms.js`,
+      },
+    },
   ],
 };
