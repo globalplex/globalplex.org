@@ -31,6 +31,9 @@ approach:
     - image: img/home-corporatetraining.png
       title: Corporate-wide Sessions
       subtitle: Corporate wide training sessions are most effective at instilling and setting corporate culture
+blog:
+  title: Our Blog
+  subtitle: Updates from the community
 testimonials:
   title: Testimonials
   subtitle: Join the leaders impacting tomorrow's world

@@ -14,6 +14,12 @@ module.exports = {
         name: "pages",
       },
     },
+    {
+      resolve: "gatsby-source-medium",
+      options: {
+        username: "globalplex",
+      },
+    },
     "gatsby-transformer-remark",
     {
       resolve: `gatsby-plugin-typography`,

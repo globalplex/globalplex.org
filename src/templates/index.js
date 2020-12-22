@@ -6,6 +6,7 @@ import Layout from "../components/Layout";
 import IndexSection from "../components/IndexSection";
 import IndexServicesCard from "../components/IndexServicesCard";
 import VerticalServicesCard from "../components/VerticalServicesCard";
+import BlogCard from "../components/BlogCard";
 import TestimonialsCard from "../components/TestimonialsCard";
 import "../pages/mystyles.scss";
 import "../utils/fontawesome";
@@ -15,6 +16,8 @@ export const IndexPageTemplate = ({
   header,
   services,
   approach,
+  blog,
+  blogEdges,
   testimonials,
   consult,
 }) => (
@@ -44,8 +47,6 @@ export const IndexPageTemplate = ({
         </div>
       </div>
     </header>
-
-    <section />
 
     <IndexSection subtitle={services.subtitle} title={services.title}>
       <div className="columns is-desktop is-vcentered">
@@ -80,6 +81,30 @@ export const IndexPageTemplate = ({
           <FontAwesomeIcon icon="chevron-right" />
         </span>
       </Link>
+    </IndexSection>
+
+    <IndexSection subtitle={blog.subtitle} title={blog.title}>
+      <div className="columns">
+        {blogEdges.map(({ node }) => (
+          <div className="column">
+            <a href={`https://medium.com/globalplex/${node.uniqueSlug}`}>
+              <BlogCard
+                image={`https://miro.medium.com/${node.virtuals.previewImage.imageId}`}
+                name={node.author.name}
+                subtitle={node.virtuals.subtitle}
+                title={node.title}
+                updatedAt={node.updatedAt}
+              />
+            </a>
+          </div>
+        ))}
+      </div>
+      <a className="link-align-end" href="https://medium.com/globalplex">
+        Explore our blog
+        <span className="icon">
+          <FontAwesomeIcon icon="chevron-right" />
+        </span>
+      </a>
     </IndexSection>
 
     <IndexSection subtitle={testimonials.subtitle} title={testimonials.title}>
@@ -126,7 +151,10 @@ export const IndexPageTemplate = ({
 
 const IndexPage = ({ data }) => (
   <Layout>
-    <IndexPageTemplate {...data.markdownRemark.frontmatter} />
+    <IndexPageTemplate
+      blogEdges={data.allMediumPost.edges}
+      {...data.markdownRemark.frontmatter}
+    />
   </Layout>
 );
 
@@ -159,6 +187,10 @@ export const query = graphql`
             subtitle
           }
         }
+        blog {
+          title
+          subtitle
+        }
         testimonials {
           title
           subtitle
@@ -174,6 +206,24 @@ export const query = graphql`
         consult {
           title
           subtitle
+        }
+      }
+    }
+    allMediumPost(limit: 3, sort: { fields: updatedAt, order: DESC }) {
+      edges {
+        node {
+          title
+          virtuals {
+            subtitle
+            previewImage {
+              imageId
+            }
+          }
+          author {
+            name
+          }
+          updatedAt(difference: "days", fromNow: true)
+          uniqueSlug
         }
       }
     }
