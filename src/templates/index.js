@@ -85,19 +85,20 @@ export const IndexPageTemplate = ({
 
     <IndexSection subtitle={blog.subtitle} title={blog.title}>
       <div className="columns">
-        {blogEdges.map(({ node }) => (
-          <div className="column">
-            <a href={`https://medium.com/globalplex/${node.uniqueSlug}`}>
-              <BlogCard
-                image={`https://miro.medium.com/${node.virtuals.previewImage.imageId}`}
-                name={node.author.name}
-                subtitle={node.virtuals.subtitle}
-                title={node.title}
-                updatedAt={node.updatedAt}
-              />
-            </a>
-          </div>
-        ))}
+        {blogEdges &&
+          blogEdges.map(({ node }) => (
+            <div className="column">
+              <a href={`https://medium.com/globalplex/${node.uniqueSlug}`}>
+                <BlogCard
+                  image={`https://miro.medium.com/${node.virtuals.previewImage.imageId}`}
+                  name={node.author.name}
+                  subtitle={node.virtuals.subtitle}
+                  title={node.title}
+                  updatedAt={node.updatedAt}
+                />
+              </a>
+            </div>
+          ))}
       </div>
       <a className="link-align-end" href="https://medium.com/globalplex">
         Explore our blog
