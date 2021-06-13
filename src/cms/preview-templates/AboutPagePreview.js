@@ -1,6 +1,7 @@
 import React from "react";
 
 import { AboutPageTemplate } from "../../templates/about";
+
 import { getAssets } from "../../utils/functions";
 
 const AboutPagePreview = ({ entry, getAsset }) => {

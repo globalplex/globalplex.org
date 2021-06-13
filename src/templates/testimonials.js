@@ -6,6 +6,7 @@ import Header from "../components/Header";
 import Tabs from "../components/Tabs";
 import TestimonialsCard from "../components/TestimonialsCard";
 import ContactSection from "../components/ContactSection";
+
 import "../pages/mystyles.scss";
 import { getId } from "../utils/functions";
 
@@ -13,28 +14,36 @@ export const TestimonialsPageTemplate = ({ header, content }) => (
   <>
     <Header {...header} />
     <Tabs
-      data={content.map((item) => ({
-        target: `/testimonials#${getId(item.title)}`,
-        title: item.title,
-      }))}
+      data={
+        content &&
+        content.map((item) => ({
+          target: `/testimonials#${getId(item.title)}`,
+          title: item.title,
+        }))
+      }
     />
 
     <section>
-      {content.map((item) => (
-        <div className="section" id={getId(item.title)}>
-          <div className="container">
-            <h1 className="title">{item.title}</h1>
-            <p className="subtitle">{item.subtitle}</p>
-            <div className="columns testimonial-columns">
-              {item.testimonials.map((testimonial) => (
-                <div className="column testimonial-column">
-                  <TestimonialsCard {...testimonial} />
-                </div>
-              ))}
+      {content &&
+        content.map((item) => (
+          <div className="section" id={getId(item.title)} key={item.title}>
+            <div className="container">
+              <h1 className="title">{item.title}</h1>
+              <p className="subtitle">{item.subtitle}</p>
+              <div className="columns testimonial-columns">
+                {item.testimonials &&
+                  item.testimonials.map((testimonial) => (
+                    <div
+                      className="column testimonial-column"
+                      key={testimonial.name}
+                    >
+                      <TestimonialsCard {...testimonial} />
+                    </div>
+                  ))}
+              </div>
             </div>
           </div>
-        </div>
-      ))}
+        ))}
     </section>
 
     <ContactSection />

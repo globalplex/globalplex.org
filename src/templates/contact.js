@@ -2,6 +2,7 @@ import React from "react";
 import { graphql } from "gatsby";
 
 import Layout from "../components/Layout";
+
 import "../pages/mystyles.scss";
 
 export const ContactPageTemplate = ({ title, subtitle, sampleQuestions }) => (
@@ -100,9 +101,10 @@ export const ContactPageTemplate = ({ title, subtitle, sampleQuestions }) => (
           <div className="column is-half-desktop is-two-fifths-widescreen">
             <div className="section">
               <h2 className="title has-text-dark">{sampleQuestions.title}</h2>
-              {sampleQuestions.questions.map((item) => (
-                <p>{item}</p>
-              ))}
+              {sampleQuestions.questions &&
+                sampleQuestions.questions.map((item) => (
+                  <p key={item}>{item}</p>
+                ))}
             </div>
           </div>
         </div>

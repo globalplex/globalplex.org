@@ -10,13 +10,13 @@ services:
   title: Our Services
   subtitle: Training the next generation of leaders
   content:
-    - title: Leadership & Management
+    - title: Leadership and Management
       subtitle: Develop future-proof leaders through training on core, timeless leadership skills
     - title: Career Acceleration
       subtitle: Skills that have immediate, real time impact to launch your career to the next level
     - title: Personal Development
       subtitle: Skills that help you understand yourself and grow so that you can then lead others
-    - title: Teams & Corporates
+    - title: Teams and Corporates
       subtitle: In a fast paced world, learn the skills that reduce redundancy in teams and maximize impact
 approach:
   title: Our Approach
@@ -40,7 +40,7 @@ testimonials:
   content:
     - image: img/testimonials-jackson.png
       name: Jackson Ye
-      title: Head of Technology & Development
+      title: Head of Technology and Development
       subtitle: Upspring Purification Technology Ltd., HK
       blurb: Methodical and appropriate.
       description: Entrepreneurship is an area that I was tremendously influenced by. Previously, the fear of failure was always something that held me back from pursuing my dreams. From the training I receivedout making them feeling discouraged. Ultimately, it is his oratory prowess, professional yet with a personal touch, perfected into a sublime concoction, which proves so effective in leading many others, like myself, to achieve our high, I learned to overcome that fear by placing my self-worth on something greater than achievements, circumstances or people. Doing so has liberated me to explore new opportunities and endeavors that I never believe was possible.

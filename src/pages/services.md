@@ -6,7 +6,7 @@ header:
   title: Our Services
   subtitle: Training to help you discover and develop your potential
 content:
-  - title: Leadership & Management
+  - title: Leadership and Management
     subtitle: Develop future-proof leaders through training on core, timeless leadership skills
     cards:
       - image: img/services-leading.png
@@ -39,7 +39,7 @@ content:
       - image: img/services-eq.png
         title: Emotional Intelligence
         subtitle: Learn how to understand and take control of your own emotions to lead with clarity and build stable teams
-  - title: Teams & Corporates
+  - title: Teams and Corporates
     subtitle: In a fast paced world, learn the skills that reduce redundancy in teams and maximize impact
     cards:
       - image: img/services-negotiation.png

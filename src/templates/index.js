@@ -4,10 +4,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import Layout from "../components/Layout";
 import IndexSection from "../components/IndexSection";
+import ChevronLink from "../components/ChevronLink";
 import IndexServicesCard from "../components/IndexServicesCard";
 import VerticalServicesCard from "../components/VerticalServicesCard";
 import BlogCard from "../components/BlogCard";
 import TestimonialsCard from "../components/TestimonialsCard";
+
 import "../pages/mystyles.scss";
 import "../utils/fontawesome";
 import { getId } from "../utils/functions";
@@ -56,38 +58,36 @@ export const IndexPageTemplate = ({
           </figure>
         </div>
         <div className="column index-services-column">
-          {services.content.map((item) => (
-            <div>
-              <Link to={`/services#${getId(item.title)}`}>
-                <IndexServicesCard {...item} />
-              </Link>
-            </div>
-          ))}
+          {services.content &&
+            services.content.map((item) => (
+              <div key={item.title}>
+                <Link to={`/services#${getId(item.title)}`}>
+                  <IndexServicesCard {...item} />
+                </Link>
+              </div>
+            ))}
         </div>
       </div>
+      <ChevronLink to="/services">View all our services</ChevronLink>
     </IndexSection>
 
     <IndexSection subtitle={approach.subtitle} title={approach.title}>
       <div className="columns">
-        {approach.content.map((item) => (
-          <div className="column">
-            <VerticalServicesCard {...item} />
-          </div>
-        ))}
+        {approach.content &&
+          approach.content.map((item) => (
+            <div className="column" key={item.title}>
+              <VerticalServicesCard {...item} />
+            </div>
+          ))}
       </div>
-      <Link className="link-align-end" to="/contact">
-        Contact us to learn more
-        <span className="icon">
-          <FontAwesomeIcon icon="chevron-right" />
-        </span>
-      </Link>
+      <ChevronLink to="/contact">Contact us to learn more</ChevronLink>
     </IndexSection>
 
     <IndexSection subtitle={blog.subtitle} title={blog.title}>
       <div className="columns">
         {blogEdges &&
           blogEdges.map(({ node }) => (
-            <div className="column">
+            <div className="column" key={node.uniqueSlug}>
               <a href={`https://medium.com/globalplex/${node.uniqueSlug}`}>
                 <BlogCard
                   image={`https://miro.medium.com/${node.virtuals.previewImage.imageId}`}
@@ -110,18 +110,14 @@ export const IndexPageTemplate = ({
 
     <IndexSection subtitle={testimonials.subtitle} title={testimonials.title}>
       <div className="columns testimonial-columns">
-        {testimonials.content.map((item) => (
-          <div className="column testimonial-column">
-            <TestimonialsCard {...item} />
-          </div>
-        ))}
+        {testimonials.content &&
+          testimonials.content.map((item) => (
+            <div className="column testimonial-column" key={item.name}>
+              <TestimonialsCard {...item} />
+            </div>
+          ))}
       </div>
-      <Link className="link-align-end" to="/testimonials">
-        See more testimonials
-        <span className="icon">
-          <FontAwesomeIcon icon="chevron-right" />
-        </span>
-      </Link>
+      <ChevronLink to="/testimonials">See more testimonials</ChevronLink>
     </IndexSection>
 
     <section className="section">

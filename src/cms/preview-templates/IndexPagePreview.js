@@ -1,6 +1,7 @@
 import React from "react";
 
 import { IndexPageTemplate } from "../../templates/index";
+
 import { getAssets } from "../../utils/functions";
 
 const IndexPagePreview = ({ entry, getAsset }) => {

@@ -7,6 +7,7 @@ import Tabs from "../components/Tabs";
 import VerticalServicesCard from "../components/VerticalServicesCard";
 import HorizontalServicesCard from "../components/HorizontalServicesCard";
 import ContactSection from "../components/ContactSection";
+
 import "../pages/mystyles.scss";
 import { getId } from "../utils/functions";
 
@@ -14,36 +15,42 @@ export const ServicesPageTemplate = ({ header, content, formats }) => (
   <>
     <Header {...header} />
     <Tabs
-      data={content.map((item) => ({
-        target: `/services#${getId(item.title)}`,
-        title: item.title,
-      }))}
+      data={
+        content &&
+        content.map((item) => ({
+          target: `/services#${getId(item.title)}`,
+          title: item.title,
+        }))
+      }
     />
 
-    {content.map((item) => {
-      const ServicesCard =
-        item.cards.length < 3 ? HorizontalServicesCard : VerticalServicesCard;
-      return (
-        <section className="section" id={getId(item.title)}>
-          <div className="container">
-            <h1 className="title">{item.title}</h1>
-            <p className="subtitle">{item.subtitle}</p>
-            <div className="columns is-multiline is-centered pt-4">
-              {item.cards.map((card) => (
-                <div
-                  className={`column ${
-                    item.cards.length < 3 &&
-                    "is-four-fifths-tablet is-half-widescreen"
-                  }`}
-                >
-                  <ServicesCard {...card} />
-                </div>
-              ))}
+    {content &&
+      content.map((item) => {
+        const ServicesCard =
+          item.cards.length < 3 ? HorizontalServicesCard : VerticalServicesCard;
+        return (
+          <section className="section" id={getId(item.title)} key={item.title}>
+            <div className="container">
+              <h1 className="title">{item.title}</h1>
+              <p className="subtitle">{item.subtitle}</p>
+              <div className="columns is-multiline is-centered pt-4">
+                {item.cards &&
+                  item.cards.map((card) => (
+                    <div
+                      className={`column ${
+                        item.cards.length < 3 &&
+                        "is-four-fifths-tablet is-half-widescreen"
+                      }`}
+                      key={card.title}
+                    >
+                      <ServicesCard {...card} />
+                    </div>
+                  ))}
+              </div>
             </div>
-          </div>
-        </section>
-      );
-    })}
+          </section>
+        );
+      })}
 
     <section>
       <div className="columns is-desktop is-gapless is-vcentered has-background-dark">
@@ -56,9 +63,12 @@ export const ServicesPageTemplate = ({ header, content, formats }) => (
           <div className="section px-6">
             <p className="title is-3 has-text-light">{formats.title}</p>
             <ol className="has-boxed-counter">
-              {formats.ways.map((item) => (
-                <li className="is-size-5 has-text-light">{item}</li>
-              ))}
+              {formats.ways &&
+                formats.ways.map((item) => (
+                  <li className="is-size-5 has-text-light" key={item}>
+                    {item}
+                  </li>
+                ))}
             </ol>
           </div>
         </div>

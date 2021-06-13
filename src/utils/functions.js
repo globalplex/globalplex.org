@@ -2,8 +2,8 @@ import React from "react";
 
 export const formatParagraph = (str) => (
   <>
-    {str.split("\n").map((item) => (
-      <p>{item}</p>
+    {str.split("\n").map((item, idx) => (
+      <p key={idx}>{item}</p>
     ))}
   </>
 );

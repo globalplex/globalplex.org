@@ -8,6 +8,7 @@ import ValuesCard from "../components/ValuesCard";
 import FoundersCard from "../components/FoundersCard";
 import TeamCard from "../components/TeamCard";
 import ContactSection from "../components/ContactSection";
+
 import "../pages/mystyles.scss";
 import { formatParagraph, getId } from "../utils/functions";
 
@@ -23,24 +24,10 @@ export const AboutPageTemplate = ({
   <>
     <Header {...header} />
     <Tabs
-      data={[
-        {
-          target: `/about#${getId(story.title)}`,
-          title: story.title,
-        },
-        {
-          target: `/about#${getId(founders.title)}`,
-          title: founders.title,
-        },
-        {
-          target: `/about#${getId(values.title)}`,
-          title: values.title,
-        },
-        {
-          target: `/about#${getId(team.title)}`,
-          title: team.title,
-        },
-      ]}
+      data={[story, values, founders, team].map((item) => ({
+        target: `/about#${getId(item.title)}`,
+        title: item.title,
+      }))}
     />
 
     <section className="section" id={getId(story.title)}>
@@ -70,9 +57,10 @@ export const AboutPageTemplate = ({
         <p className="subtitle has-text-centered mb-6">{values.subtitle}</p>
         <div className="columns is-multiline is-centered">
           <div className="column is-four-fifths-desktop is-two-thirds-widescreen values-column">
-            {values.cards.map((item) => (
-              <ValuesCard {...item} />
-            ))}
+            {values.cards &&
+              values.cards.map((item) => (
+                <ValuesCard key={item.title} {...item} />
+              ))}
           </div>
         </div>
       </div>
@@ -81,9 +69,10 @@ export const AboutPageTemplate = ({
     <section className="section" id={getId(founders.title)}>
       <div className="container founders-container">
         <h1 className="title pb-5">{founders.title}</h1>
-        {founders.cards.map((item) => (
-          <FoundersCard {...item} />
-        ))}
+        {founders.cards &&
+          founders.cards.map((item) => (
+            <FoundersCard key={item.title} {...item} />
+          ))}
       </div>
     </section>
 
@@ -96,11 +85,12 @@ export const AboutPageTemplate = ({
       <div className="container">
         <h1 className="title has-text-centered pb-5">{team.title}</h1>
         <div className="columns is-multiline is-centered">
-          {team.cards.map((item) => (
-            <div class="column is-one-third">
-              <TeamCard {...item} />
-            </div>
-          ))}
+          {team.cards &&
+            team.cards.map((item) => (
+              <div className="column is-one-third" key={item.title}>
+                <TeamCard {...item} />
+              </div>
+            ))}
         </div>
       </div>
     </section>

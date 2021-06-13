@@ -1,6 +1,7 @@
 import React from "react";
 
 import { ServicesPageTemplate } from "../../templates/services";
+
 import { getAssets } from "../../utils/functions";
 
 const ServicesPagePreview = ({ entry, getAsset }) => {

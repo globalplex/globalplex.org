@@ -4,14 +4,14 @@ path: /testimonials
 header:
   image: img/testimonials-header.png
   title: Testimonials
-  subtitle: Training to help you discover and develop your potential
+  subtitle: Read what people are saying about how we have impacted them
 content:
-  - title: Leadership & Management
+  - title: Leadership and Management
     subtitle: Develop future-proof leaders through training on core, timeless leadership skills
     testimonials:
       - image: img/testimonials-jackson.png
         name: Jackson Ye
-        title: Head of Technology & Development
+        title: Head of Technology and Development
         subtitle: Upspring Purification Technology Ltd., HK
         blurb: Methodical and appropriate.
         description: Entrepreneurship is an area that I was tremendously influenced by. Previously, the fear of failure was always something that held me back from pursuing my dreams. From the training I receivedout making them feeling discouraged. Ultimately, it is his oratory prowess, professional yet with a personal touch, perfected into a sublime concoction, which proves so effective in leading many others, like myself, to achieve our high, I learned to overcome that fear by placing my self-worth on something greater than achievements, circumstances or people. Doing so has liberated me to explore new opportunities and endeavors that I never believe was possible.
@@ -23,8 +23,8 @@ content:
         description: Seth has been mentoring me to be a better communicator in the way I interact with others. He helped me to realise how much difference it would make if I were able to effectively deliver my ideas to people. He also guided me from time to time to come up with specific next steps, so that I would always have clear direction in my personal growth. All of these have led me to grow significantly in my professional skill over the past year so that I am now empowered to create bigger impact to people in my workplace and community.
       - image: img/testimonials-bo.png
         name: Bo Zhu
-        title: Project Manager & Team Lead
-        subtitle: The Knowledge & Education Exchange Platform CUHK
+        title: Project Manager and Team Lead
+        subtitle: The Knowledge and Education Exchange Platform CUHK
         blurb: Helped me to navigate the complexities.
         description: Globalplex has helped me to develop one of most important skills I need to lead my team - communication. I've benefited from learning verbal and written communication, along with the critical thinking that is necessary to know the most effective timing, emphasis, and structure of how to communicate. This has helped me to navigate the complexities of a large organization and motivate the team I work with day to day.
   - title: Career Acceleration
@@ -69,7 +69,7 @@ content:
         subtitle: Hong Kong International School
         blurb: I have also learned to persevere and have grit in the journey to change.
         description: One of the biggest lessons in the past few years working with Seth was to adopt the growth mindset. While everyone has strengths and weaknesses, I tend to magnify my shortcomings and linger in my failures. Seth, again and again, encourages me to accept my areas of growth and provides me with tangible next steps to see small wins in the process. Have I ever thought of giving up? Yes, I have. Nonetheless, I have also learned to persevere and have grit in the journey to change.
-  - title: Teams & Corporates
+  - title: Teams and Corporates
     subtitle: In a fast paced world, learn the skills that reduce redundancy in teams and maximize impact
     testimonials:
       - image: img/testimonials-cheryl.png
