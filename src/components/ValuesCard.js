@@ -9,7 +9,7 @@ const ValuesCard = ({ image, subtitle, title }) => (
             <img alt="" src={image} />
           </figure>
           <div className="is-overlay background-gradient is-flex is-align-items-flex-end">
-            <h1 className="title is-4 has-text-white pb-5 pl-5 pr-6">
+            <h1 className="title is-4 has-text-white pb-5 pl-5 pr-6 has-text-shadow">
               {title}
             </h1>
           </div>

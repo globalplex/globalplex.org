@@ -38,7 +38,7 @@ body, button, input, select, textarea {
 }
 
 p + p {
-  margin-top: 0.75rem;
+  margin-top: 1rem;
 }
 
 .navbar-item img {
@@ -69,7 +69,7 @@ p + p {
 }
 
 section:nth-child(odd) {
-  background-color: hsl(0, 0%, 96%);
+  background-color: $white-ter;
 }
 
 .hero-background {
@@ -85,7 +85,7 @@ section:nth-child(odd) {
 }
 
 .card-border {
-  border: 1px solid hsl(0, 0%, 86%);
+  border: 1px solid $grey-lighter;
 }
 
 .card-max {
@@ -96,7 +96,7 @@ section:nth-child(odd) {
 }
 
 .background-gradient {
-  background-image: linear-gradient(transparent, transparent, hsla(0, 0%, 0%, 0.6));
+  background-image: linear-gradient(transparent, hsla(0, 0%, 0%, 0.5));
 }
 
 .underlined-heading:after {
@@ -115,7 +115,7 @@ section:nth-child(odd) {
 
 .testimonial-column + .testimonial-column {
   @include tablet {
-    border-left: 1px solid hsl(0, 0%, 86%);
+    border-left: 1px solid $grey-lighter;
   }
 }
 
@@ -136,8 +136,8 @@ section:nth-child(odd) {
 }
 
 .has-boxed-counter li::before {
-  border: 1px hsl(0, 0%, 96%) solid;
-  color: hsl(0, 0%, 96%);
+  border: 1px $white-ter solid;
+  color: $white-ter;
   content: counter(counter);
   height: 2rem;
   left: -3rem;
@@ -168,4 +168,8 @@ section:nth-child(odd) {
 
 .m-a {
   margin: auto;
+}
+
+.has-text-shadow {
+  text-shadow: 0px 0px 10px $black-ter;
 }

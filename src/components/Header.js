@@ -11,10 +11,12 @@ const Header = ({ image, subtitle, title }) => (
             <div className="pt-6" />
             <div className="pt-6" />
             <div className="pt-6" />
-            <h1 className="title is-6 underlined-heading is-uppercase has-text-white">
+            <h1 className="title is-6 underlined-heading is-uppercase has-text-white has-text-shadow">
               {title}
             </h1>
-            <p className="subtitle is-3 has-text-white pt-3">{subtitle}</p>
+            <p className="subtitle is-3 has-text-white pt-3 has-text-shadow">
+              {subtitle}
+            </p>
           </div>
         </div>
       </div>

@@ -33,10 +33,12 @@ export const IndexPageTemplate = ({
         <div className="container py-6">
           <div className="columns has-text-centered-mobile">
             <div className="column is-four-fifths is-half-widescreen">
-              <p className="title is-1 is-spaced has-text-weight-light has-text-light">
+              <p className="title is-1 is-spaced has-text-weight-light has-text-light has-text-shadow">
                 {header.title}
               </p>
-              <p className="subtitle has-text-light pb-2">{header.subtitle}</p>
+              <p className="subtitle has-text-light pb-2 has-text-shadow">
+                {header.subtitle}
+              </p>
               <Link
                 className="button is-primary is-uppercase has-text-weight-bold px-5 py-5"
                 to="/contact"
