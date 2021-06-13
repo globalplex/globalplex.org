@@ -1,14 +1,14 @@
 import React from "react";
 
 const BlogCard = ({ image, name, subtitle, title, updatedAt }) => (
-  <article className="card card-border card-max is-full-height flex-column">
+  <article className="card card-border card-max is-full-height is-flex is-flex-direction-column">
     <div className="card-image">
       <figure className="image is-3by2">
         <img alt="" src={image} />
       </figure>
     </div>
-    <div className="card-content flex-grow">
-      <div className="is-full-height flex-column space-between">
+    <div className="card-content is-flex-grow-1">
+      <div className="is-full-height is-flex is-flex-direction-column	is-justify-content-space-between">
         <div>
           <h1 className="title is-4 has-text-dark">{title}</h1>
           <p className="subtitle is-6 py-4">{subtitle}</p>

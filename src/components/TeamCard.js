@@ -2,7 +2,7 @@ import React from "react";
 
 const TeamCard = ({ image, subtitle, title }) => (
   <article className="has-text-centered">
-    <figure className="image is-160x160 ma">
+    <figure className="image is-160x160 m-a">
       <img alt={title} className="is-rounded" src={image} />
     </figure>
     <div className="py-4">

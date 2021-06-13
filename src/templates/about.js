@@ -9,7 +9,7 @@ import FoundersCard from "../components/FoundersCard";
 import TeamCard from "../components/TeamCard";
 import ContactSection from "../components/ContactSection";
 
-import "../pages/mystyles.scss";
+import "../styles/global.scss";
 import { formatParagraph, getId } from "../utils/functions";
 
 export const AboutPageTemplate = ({

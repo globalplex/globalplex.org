@@ -11,14 +11,14 @@ const TestimonialsCard = ({
   const [isActive, setIsActive] = useState(false);
 
   return (
-    <div className="card card-max is-full-height flex-column">
+    <div className="card card-max is-full-height is-flex is-flex-direction-column">
       <div className="card-image">
         <figure className="image is-4by3">
           <img alt={name} src={image} />
         </figure>
       </div>
-      <div className="card-content has-text-centered flex-grow">
-        <div className="is-full-height flex-column space-between">
+      <div className="card-content has-text-centered is-flex-grow-1">
+        <div className="is-full-height is-flex is-flex-direction-column is-justify-content-space-between">
           <div>
             <p className="title is-4 has-text-dark">{name}</p>
             <p className="subtitle is-7">

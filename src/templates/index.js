@@ -10,7 +10,7 @@ import VerticalServicesCard from "../components/VerticalServicesCard";
 import BlogCard from "../components/BlogCard";
 import TestimonialsCard from "../components/TestimonialsCard";
 
-import "../pages/mystyles.scss";
+import "../styles/global.scss";
 import "../utils/fontawesome";
 import { getId } from "../utils/functions";
 
@@ -100,7 +100,10 @@ export const IndexPageTemplate = ({
             </div>
           ))}
       </div>
-      <a className="link-align-end" href="https://medium.com/globalplex">
+      <a
+        className="is-flex is-justify-content-flex-end"
+        href="https://medium.com/globalplex"
+      >
         Explore our blog
         <span className="icon">
           <FontAwesomeIcon icon="chevron-right" />

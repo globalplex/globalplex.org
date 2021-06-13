@@ -7,7 +7,7 @@ import Tabs from "../components/Tabs";
 import TestimonialsCard from "../components/TestimonialsCard";
 import ContactSection from "../components/ContactSection";
 
-import "../pages/mystyles.scss";
+import "../styles/global.scss";
 import { getId } from "../utils/functions";
 
 export const TestimonialsPageTemplate = ({ header, content }) => (

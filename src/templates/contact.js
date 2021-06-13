@@ -3,7 +3,7 @@ import { graphql } from "gatsby";
 
 import Layout from "../components/Layout";
 
-import "../pages/mystyles.scss";
+import "../styles/global.scss";
 
 export const ContactPageTemplate = ({ title, subtitle, sampleQuestions }) => (
   <>

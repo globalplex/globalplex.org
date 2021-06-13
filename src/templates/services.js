@@ -8,7 +8,7 @@ import VerticalServicesCard from "../components/VerticalServicesCard";
 import HorizontalServicesCard from "../components/HorizontalServicesCard";
 import ContactSection from "../components/ContactSection";
 
-import "../pages/mystyles.scss";
+import "../styles/global.scss";
 import { getId } from "../utils/functions";
 
 export const ServicesPageTemplate = ({ header, content, formats }) => (
