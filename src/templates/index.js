@@ -1,6 +1,6 @@
 import React from "react";
 import { graphql, Link } from "gatsby";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { FaChevronRight } from "react-icons/fa";
 
 import Layout from "../components/Layout";
 import IndexSection from "../components/IndexSection";
@@ -11,7 +11,6 @@ import BlogCard from "../components/BlogCard";
 import TestimonialsCard from "../components/TestimonialsCard";
 
 import "../styles/global.scss";
-import "../utils/fontawesome";
 import { getId } from "../utils/functions";
 
 export const IndexPageTemplate = ({
@@ -106,7 +105,7 @@ export const IndexPageTemplate = ({
       >
         Explore our blog
         <span className="icon">
-          <FontAwesomeIcon icon="chevron-right" />
+          <FaChevronRight />
         </span>
       </a>
     </IndexSection>

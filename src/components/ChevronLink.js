@@ -1,14 +1,12 @@
 import React from "react";
 import { Link } from "gatsby";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
-import "../utils/fontawesome";
+import { FaChevronRight } from "react-icons/fa";
 
 const ChevronLink = ({ children, to }) => (
   <Link className="is-flex is-justify-content-flex-end" to={to}>
     {children}
     <span className="icon">
-      <FontAwesomeIcon icon="chevron-right" />
+      <FaChevronRight />
     </span>
   </Link>
 );

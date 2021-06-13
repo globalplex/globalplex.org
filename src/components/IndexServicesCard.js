@@ -1,5 +1,5 @@
 import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { FaChevronRight } from "react-icons/fa";
 
 const IndexServicesCard = ({ subtitle, title }) => (
   <article className="card card-border">
@@ -11,7 +11,7 @@ const IndexServicesCard = ({ subtitle, title }) => (
         </div>
         <div className="column is-narrow">
           <span className="icon has-text-primary">
-            <FontAwesomeIcon icon="chevron-right" />
+            <FaChevronRight />
           </span>
         </div>
       </div>
