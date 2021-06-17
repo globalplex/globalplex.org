@@ -84,10 +84,18 @@ export const AboutPageTemplate = ({
     <section className="section" id={getId(team.title)}>
       <div className="container">
         <h1 className="title has-text-centered pb-5">{team.title}</h1>
-        <div className="columns is-multiline is-centered">
-          {team.cards &&
-            team.cards.map((item) => (
-              <div className="column is-one-third" key={item.title}>
+        <div className="columns is-centered">
+          {team.topCards &&
+            team.topCards.map((item) => (
+              <div className="column is-one-quarter" key={item.title}>
+                <TeamCard {...item} />
+              </div>
+            ))}
+        </div>
+        <div className="columns is-centered">
+          {team.bottomCards &&
+            team.bottomCards.map((item) => (
+              <div className="column is-one-quarter" key={item.title}>
                 <TeamCard {...item} />
               </div>
             ))}
@@ -143,7 +151,12 @@ export const query = graphql`
         bottomDividerImage
         team {
           title
-          cards {
+          topCards {
+            image
+            title
+            subtitle
+          }
+          bottomCards {
             image
             title
             subtitle

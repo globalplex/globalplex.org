@@ -31,14 +31,14 @@ values:
 founders:
   title: Our Founders
   cards:
-    - image: img/profile-seth.png
+    - image: img/about-seth.png
       title: Seth S. Kim
       subtitle: Chief Executive Officer
       description: |-
         Dr. Kim has started multiple organizations and is on various executive boards and has key leadership roles in helping to lead, guide, and expand the organizational influence and impact. He is a motivational speaker, leadership educator, a people developer and equipper, and organizational entrepreneur who loves to help people engineer a vision for their lives to make an impact in their sphere of influence.
         He has traveled extensively around the world to work with different organizations to train and equip people to live life with purpose, destiny, and influence. His 28+ years of experience in working with people and conducting training programs for organizations extends to over 30 nations.
         Dr. Kim holds multiple degrees including B.S. in Psychology and Sociology, M.A., and D.Min
-    - image: img/profile-joanna.png
+    - image: img/about-joanna.png
       title: Joanna Jing
       subtitle: Chief Operating Officer
       description: |-
@@ -48,20 +48,27 @@ founders:
 bottomDividerImage: img/about-divider-2.png
 team:
   title: Our Team
-  cards:
-    - image: img/jacky.png
+  topCards:
+    - image: img/about-anne.png
+      title: Anne Hu
+      subtitle: Education Director
+    - image: img/about-jacky.png
       title: Jacky Lee
-      subtitle: Chief Technology Officer
-    - image: img/angelica.png
-      title: Angelica Kosasih
-      subtitle: Product Design Lead
-    - image: img/bowen.png
+      subtitle: IT Director
+    - image: img/about-agnes.png
+      title: Agnes Yu
+      subtitle: Program Director
+  bottomCards:
+    - image: img/about-bowen.png
       title: Bowen Chin
-      subtitle: Senior Software Engineer
-    - image: img/charissa.png
+      subtitle: Web Developer
+    - image: img/about-charissa.png
       title: Charissa Hung
-      subtitle: Senior UI/UX Designer
-    - image: img/angel.png
+      subtitle: UI/UX Designer
+    - image: img/about-angelica.png
+      title: Angelica Kosasih
+      subtitle: Product Designer
+    - image: img/about-angel.png
       title: Angel Lee
-      subtitle: Senior UI/UX Designer
+      subtitle: UI/UX Designer
 ---

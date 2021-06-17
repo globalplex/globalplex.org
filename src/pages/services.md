@@ -2,7 +2,7 @@
 templateKey: services
 path: /services
 header:
-  image: img/offer-header.png
+  image: img/services-header.png
   title: Our Services
   subtitle: Training to help you discover and develop your potential
 content:
@@ -49,7 +49,7 @@ content:
         title: Conflict Resolution
         subtitle: Learn how to efficiently navigate between conflicts such that teams foster deeper unity
 formats:
-  image: img/offer-format.png
+  image: img/services-format.png
   title: Customizable training available in multiple formats
   ways:
     - In-person
