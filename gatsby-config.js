@@ -5,8 +5,6 @@ module.exports = {
       "Globalplex aims to effectively equip people to excel in life and expand their influence",
   },
   plugins: [
-    "gatsby-plugin-react-helmet",
-    "gatsby-plugin-sass",
     {
       resolve: "gatsby-source-filesystem",
       options: {
@@ -21,16 +19,12 @@ module.exports = {
       },
     },
     "gatsby-transformer-remark",
+    "gatsby-plugin-react-helmet",
+    "gatsby-plugin-sass",
     {
-      resolve: `gatsby-plugin-typography`,
+      resolve: "gatsby-plugin-google-fonts",
       options: {
-        pathToConfigModule: `src/utils/typography`,
-      },
-    },
-    {
-      resolve: `gatsby-plugin-google-fonts`,
-      options: {
-        fonts: [`Muli\:700`, `Montserrat\:400,700`],
+        fonts: ["Montserrat", "Muli:700"],
       },
     },
     {

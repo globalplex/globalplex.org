@@ -1,7 +1,11 @@
 @charset "utf-8";
 
 // If need, change your variables before importing Bulma
-$primary: #FF8700;
+
+$family-primary: "Montserrat", sans-serif;
+$title-family: "Muli", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+
+$primary: #ff8700;
 
 $title-color: $primary;
 
@@ -25,7 +29,15 @@ $section-padding: 5rem 3rem;
 
 $dimensions: 160 256;
 
-@import "~bulma/bulma.sass";
+@import "bulma/bulma.sass";
+
+section:nth-child(odd) {
+  background-color: $white-ter;
+}
+
+p + p {
+  margin-top: 1rem;
+}
 
 .section {
   @include mobile {
@@ -33,43 +45,24 @@ $dimensions: 160 256;
   }
 }
 
-body, button, input, select, textarea {
-  font-family: inherit;
+.underlined-heading:after {
+  background-color: $primary;
+  border: 2px solid $primary;
+  content: '';
+  display: block;
+  margin-top: 0.5rem;
+  width: 3rem;
 }
 
-p + p {
-  margin-top: 1rem;
+.has-text-shadow {
+  text-shadow: 0px 0px 10px $black-ter;
 }
+
+// components
 
 .navbar-item img {
   margin-bottom: 0;
   max-height: 2.25rem;
-}
-
-.is-active-transition {
-  opacity: 1;
-  transition: 300ms ease;
-}
-
-.is-inactive-transition {
-  opacity: 0;
-  transition: 300ms ease;
-}
-
-.is-scrollable {
-  overflow: auto;
-}
-
-.is-min-full-height {
-  min-height: 100%;
-}
-
-.is-full-height {
-  height: 100%;
-}
-
-section:nth-child(odd) {
-  background-color: $white-ter;
 }
 
 .hero-background {
@@ -95,56 +88,25 @@ section:nth-child(odd) {
   }
 }
 
+.is-full-height {
+  height: 100%;
+}
+
 .background-gradient {
   background-image: linear-gradient(transparent, hsla(0, 0%, 0%, 0.5));
 }
 
-.underlined-heading:after {
-  background-color: $primary;
-  border: 2px solid $primary;
-  content: '';
-  display: block;
-  margin-top: 0.5rem;
-  width: 3rem;
-}
+// index.js
 
-.testimonial-columns {
-  margin: auto;
-  max-width: 1000px;
-}
-
-.testimonial-column + .testimonial-column {
-  @include tablet {
-    border-left: 1px solid $grey-lighter;
-  }
+.has-small-line-height {
+  line-height: 1.15;
 }
 
 .index-services-column > div + div {
   margin-top: 1rem;
 }
 
-.has-boxed-counter {
-  counter-reset: counter;
-  list-style: none;
-  padding-left: 3rem;
-}
-
-.has-boxed-counter li {
-  counter-increment: counter;
-  margin-top: 1rem;
-  position: relative;
-}
-
-.has-boxed-counter li::before {
-  border: 1px $white-ter solid;
-  color: $white-ter;
-  content: counter(counter);
-  height: 2rem;
-  left: -3rem;
-  position: absolute;
-  text-align: center;
-  width: 2rem;
-}
+// about.js
 
 .values-column > article + article {
   margin-top: 3rem;
@@ -170,6 +132,58 @@ section:nth-child(odd) {
   margin: auto;
 }
 
-.has-text-shadow {
-  text-shadow: 0px 0px 10px $black-ter;
+// services.js
+
+.has-boxed-counter {
+  counter-reset: counter;
+  list-style: none;
+  padding-left: 3rem;
+}
+
+.has-boxed-counter li {
+  counter-increment: counter;
+  margin-top: 1rem;
+  position: relative;
+}
+
+.has-boxed-counter li::before {
+  border: 1px $white-ter solid;
+  color: $white-ter;
+  content: counter(counter);
+  height: 2rem;
+  left: -3rem;
+  position: absolute;
+  text-align: center;
+  width: 2rem;
+}
+
+// testimonals.js
+
+.is-active-transition {
+  opacity: 1;
+  transition: 300ms ease;
+}
+
+.is-inactive-transition {
+  opacity: 0;
+  transition: 300ms ease;
+}
+
+.is-scrollable {
+  overflow: auto;
+}
+
+.is-min-full-height {
+  min-height: 100%;
+}
+
+.testimonial-columns {
+  margin: auto;
+  max-width: 1000px;
+}
+
+.testimonial-column + .testimonial-column {
+  @include tablet {
+    border-left: 1px solid $grey-lighter;
+  }
 }
