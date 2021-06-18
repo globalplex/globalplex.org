@@ -14,7 +14,7 @@ const NotFoundPage = () => (
             404 - Page Not Found
           </h1>
           <p className="subtitle">
-            We can't find the page you are looking for!
+            We can&rsquo;t find the page you are looking for!
           </p>
           <Link
             className="button is-primary is-uppercase has-text-weight-bold px-5 py-5"

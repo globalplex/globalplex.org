@@ -28,7 +28,7 @@ const TestimonialsCard = ({
             </p>
           </div>
           <div>
-            <p className="has-text-weight-bold py-4">"{blurb}"</p>
+            <p className="has-text-weight-bold py-4">&ldquo;{blurb}&rdquo;</p>
           </div>
           <div>
             <button

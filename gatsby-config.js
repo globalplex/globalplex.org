@@ -22,9 +22,20 @@ module.exports = {
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sass",
     {
+      resolve: "gatsby-plugin-eslint",
+      options: {
+        stages: ["develop"],
+        extensions: "js",
+        exclude: [".cache", "node_modules", "public"],
+        options: {
+          failOnError: false,
+        },
+      },
+    },
+    {
       resolve: "gatsby-plugin-google-fonts",
       options: {
-        fonts: ["Montserrat", "Muli:700"],
+        fonts: ["Montserrat:400,700", "Muli:700"],
       },
     },
     {
