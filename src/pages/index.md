@@ -8,26 +8,28 @@ header:
 services:
   image: img/home-offer.png
   title: Our Services
-  subtitle: Training the next generation of leaders
+  subtitle: Training the next generation of initiators
   content:
+    - title: Executive Coaching
+      subtitle: How to lead and inspire with VISION
     - title: Leadership and Management
-      subtitle: Develop future-proof leaders through training on core, timeless leadership skills
-    - title: Career Acceleration
-      subtitle: Skills that have immediate, real time impact to launch your career to the next level
-    - title: Personal Development
-      subtitle: Skills that help you understand yourself and grow so that you can then lead others
-    - title: Teams and Corporates
-      subtitle: In a fast paced world, learn the skills that reduce redundancy in teams and maximize impact
+      subtitle: How to develop as a LEADER
+    - title: Integrative Personal Transformation
+      subtitle: How to INVEST in your personal development
+    - title: Team Development
+      subtitle: How to mobilize teams for maximum IMPACT
+    - title: Emerging Professionals
+      subtitle: How to accelerate GROWTH in your professional career
 approach:
   title: Our Approach
-  subtitle: Training in multiple levels
+  subtitle: Training in multiple settings
   content:
     - image: img/home-individualtraining.png
       title: One-on-one Sessions
-      subtitle: These training sessions are focused on the individual. It is more effective for training soft skills
+      subtitle: These training sessions are focused on the individual and are more effective for developing soft skills
     - image: img/home-teamtraining.png
       title: Team-based Trainings
-      subtitle: Used to build leadership and teamwork quailites of your members to work better as a team
+      subtitle: Helpful for building leadership and teamwork qualities of your members to work better as a team
     - image: img/home-corporatetraining.png
       title: Corporate-wide Sessions
       subtitle: Corporate wide training sessions are most effective at instilling and setting corporate culture

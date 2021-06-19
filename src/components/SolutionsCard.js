@@ -1,7 +1,7 @@
 import React from "react";
 import { FaChevronRight } from "react-icons/fa";
 
-const IndexServicesCard = ({ subtitle, title }) => (
+const SolutionsCard = ({ subtitle, title }) => (
   <article className="card card-border">
     <div className="card-content">
       <div className="columns is-mobile is-vcentered">
@@ -19,4 +19,4 @@ const IndexServicesCard = ({ subtitle, title }) => (
   </article>
 );
 
-export default IndexServicesCard;
+export default SolutionsCard;

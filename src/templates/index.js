@@ -5,13 +5,12 @@ import { FaChevronRight } from "react-icons/fa";
 import Layout from "../components/Layout";
 import IndexSection from "../components/IndexSection";
 import ChevronLink from "../components/ChevronLink";
-import IndexServicesCard from "../components/IndexServicesCard";
+import SolutionsCard from "../components/SolutionsCard";
 import VerticalServicesCard from "../components/VerticalServicesCard";
 import BlogCard from "../components/BlogCard";
 import TestimonialsCard from "../components/TestimonialsCard";
 
 import "../styles/global.scss";
-import { getId } from "../utils/functions";
 
 export const IndexPageTemplate = ({
   header,
@@ -53,7 +52,7 @@ export const IndexPageTemplate = ({
 
     <IndexSection subtitle={services.subtitle} title={services.title}>
       <div className="columns is-desktop is-vcentered">
-        <div className="column is-hidden-touch is-one-third-fullhd">
+        <div className="column is-hidden-touch is-hidden-desktop-only is-5-widescreen">
           <figure className="image is-square">
             <img alt="" src={services.image} />
           </figure>
@@ -62,9 +61,7 @@ export const IndexPageTemplate = ({
           {services.content &&
             services.content.map((item) => (
               <div key={item.title}>
-                <Link to={`/services#${getId(item.title)}`}>
-                  <IndexServicesCard {...item} />
-                </Link>
+                <SolutionsCard {...item} />
               </div>
             ))}
         </div>
