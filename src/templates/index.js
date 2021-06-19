@@ -127,7 +127,7 @@ export const IndexPageTemplate = ({
           <div className="section">
             <div className="columns is-desktop is-vcentered px-4">
               <div className="column is-two-thirds-desktop is-three-fifths-widescreen">
-                <p className="title is-2 has-text-light">{consult.title}</p>
+                <h3 className="title is-2 has-text-light">{consult.title}</h3>
                 <p className="has-text-light">{consult.subtitle}</p>
               </div>
               <div className="column" />

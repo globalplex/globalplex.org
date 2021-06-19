@@ -6,7 +6,7 @@ const TeamCard = ({ image, subtitle, title }) => (
       <img alt={title} className="is-rounded" src={image} />
     </figure>
     <div className="py-4">
-      <h1 className="title is-5 is-uppercase has-text-dark">{title}</h1>
+      <h3 className="title is-5 is-uppercase has-text-dark">{title}</h3>
       <p className="subtitle is-6 has-text-grey-light">{subtitle}</p>
     </div>
   </article>

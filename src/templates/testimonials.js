@@ -28,7 +28,7 @@ export const TestimonialsPageTemplate = ({ header, content }) => (
         content.map((item) => (
           <div className="section" id={getId(item.title)} key={item.title}>
             <div className="container">
-              <h1 className="title">{item.title}</h1>
+              <h2 className="title">{item.title}</h2>
               <p className="subtitle">{item.subtitle}</p>
               <div className="columns testimonial-columns">
                 {item.testimonials &&

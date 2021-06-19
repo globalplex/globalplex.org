@@ -31,7 +31,7 @@ export const ServicesPageTemplate = ({ header, content, formats }) => (
         return (
           <section className="section" id={getId(item.title)} key={item.title}>
             <div className="container">
-              <h1 className="title">{item.title}</h1>
+              <h2 className="title">{item.title}</h2>
               <p className="subtitle">{item.subtitle}</p>
               <div className="columns is-multiline is-centered pt-4">
                 {item.cards &&
@@ -61,7 +61,7 @@ export const ServicesPageTemplate = ({ header, content, formats }) => (
         </div>
         <div className="column">
           <div className="section px-6">
-            <p className="title is-3 has-text-light">{formats.title}</p>
+            <h3 className="title is-3 has-text-light">{formats.title}</h3>
             <ol className="has-boxed-counter">
               {formats.ways &&
                 formats.ways.map((item) => (

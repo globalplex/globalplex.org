@@ -32,9 +32,9 @@ export const AboutPageTemplate = ({
 
     <section className="section" id={getId(story.title)}>
       <div className="container">
-        <h1 className="title">{story.title}</h1>
+        <h2 className="title">{story.title}</h2>
         <div className="columns is-vcentered">
-          <div className="column is-three-quarters-widescreen">
+          <div className="column is-three-quarters-widescreen content">
             {formatParagraph(story.description)}
           </div>
           <div className="column is-hidden-touch is-hidden-desktop-only">
@@ -46,14 +46,14 @@ export const AboutPageTemplate = ({
       </div>
     </section>
 
-    <section className="hero is-medium is-relative is-clipped">
+    <div className="hero is-medium is-relative is-clipped">
       <img alt="" className="hero-background" src={topDividerImage} />
       <div className="hero-body" />
-    </section>
+    </div>
 
     <section className="section" id={getId(values.title)}>
       <div className="container">
-        <h1 className="title has-text-centered">{values.title}</h1>
+        <h2 className="title has-text-centered">{values.title}</h2>
         <p className="subtitle has-text-centered mb-6">{values.subtitle}</p>
         <div className="columns is-multiline is-centered">
           <div className="column is-four-fifths-desktop is-two-thirds-widescreen values-column">
@@ -68,7 +68,7 @@ export const AboutPageTemplate = ({
 
     <section className="section" id={getId(founders.title)}>
       <div className="container founders-container">
-        <h1 className="title pb-5">{founders.title}</h1>
+        <h2 className="title pb-5">{founders.title}</h2>
         {founders.cards &&
           founders.cards.map((item) => (
             <FoundersCard key={item.title} {...item} />
@@ -76,14 +76,14 @@ export const AboutPageTemplate = ({
       </div>
     </section>
 
-    <section className="hero is-medium is-relative is-clipped">
+    <div className="hero is-medium is-relative is-clipped">
       <img alt="" className="hero-background" src={bottomDividerImage} />
       <div className="hero-body" />
-    </section>
+    </div>
 
     <section className="section" id={getId(team.title)}>
       <div className="container">
-        <h1 className="title has-text-centered pb-5">{team.title}</h1>
+        <h2 className="title has-text-centered pb-5">{team.title}</h2>
         <div className="columns is-centered">
           {team.topCards &&
             team.topCards.map((item) => (

@@ -10,7 +10,7 @@ const BlogCard = ({ image, name, subtitle, title, updatedAt }) => (
     <div className="card-content is-flex-grow-1">
       <div className="is-full-height is-flex is-flex-direction-column	is-justify-content-space-between">
         <div>
-          <h1 className="title is-4 has-text-dark">{title}</h1>
+          <h3 className="title is-4 has-text-dark">{title}</h3>
           <p className="subtitle is-6 py-4">{subtitle}</p>
         </div>
         <div className="has-text-right">

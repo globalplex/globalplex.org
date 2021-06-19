@@ -35,10 +35,6 @@ section:nth-child(odd) {
   background-color: $white-ter;
 }
 
-p + p {
-  margin-top: 1rem;
-}
-
 .section {
   @include mobile {
     padding: 3rem 1rem;

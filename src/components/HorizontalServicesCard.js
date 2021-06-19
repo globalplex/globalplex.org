@@ -5,9 +5,9 @@ const HorizontalServicesCard = ({ image, subtitle, title }) => (
     <div className="columns is-gapless">
       <div className="column">
         <div className="card-content">
-          <h1 className="title is-4 underlined-heading has-text-dark">
+          <h3 className="title is-4 underlined-heading has-text-dark">
             {title}
-          </h1>
+          </h3>
           <p className="subtitle is-6 pt-4">{subtitle}</p>
         </div>
       </div>

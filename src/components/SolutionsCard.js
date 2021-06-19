@@ -6,7 +6,7 @@ const SolutionsCard = ({ subtitle, title }) => (
     <div className="card-content">
       <div className="columns is-mobile is-vcentered">
         <div className="column">
-          <h1 className="title is-4 has-text-dark">{title}</h1>
+          <h3 className="title is-4 has-text-dark">{title}</h3>
           <p className="subtitle is-6">{subtitle}</p>
         </div>
         <div className="column is-narrow">
