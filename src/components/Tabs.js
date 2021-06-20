@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "gatsby";
 
 const Tabs = ({ data }) => (
-  <div className="tabs is-fullwidth is-hidden-touch has-background-dark has-text-white pt-1">
+  <div className="tabs is-fullwidth is-hidden-touch has-background-dark has-text-white">
     <div className="container">
       <ul>
         {data &&

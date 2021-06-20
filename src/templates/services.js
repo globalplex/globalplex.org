@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 import { graphql } from "gatsby";
 
 import Layout from "../components/Layout";
@@ -13,6 +14,9 @@ import { getId } from "../utils/functions";
 
 export const ServicesPageTemplate = ({ header, content, formats }) => (
   <>
+    <Helmet>
+      <title>{header.title}</title>
+    </Helmet>
     <Header {...header} />
     <Tabs
       data={

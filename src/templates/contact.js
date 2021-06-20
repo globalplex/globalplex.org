@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 import { graphql } from "gatsby";
 
 import Layout from "../components/Layout";
@@ -7,6 +8,10 @@ import "../styles/global.scss";
 
 export const ContactPageTemplate = ({ title, subtitle, sampleQuestions }) => (
   <>
+    <Helmet>
+      <title>{title}</title>
+    </Helmet>
+
     <section className="hero">
       <div className="hero-body">
         <div className="container">

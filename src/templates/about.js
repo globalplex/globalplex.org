@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 import { graphql } from "gatsby";
 
 import Layout from "../components/Layout";
@@ -22,6 +23,9 @@ export const AboutPageTemplate = ({
   team,
 }) => (
   <>
+    <Helmet>
+      <title>{header.title}</title>
+    </Helmet>
     <Header {...header} />
     <Tabs
       data={[story, values, founders, team].map((item) => ({

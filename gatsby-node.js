@@ -27,7 +27,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     createPage({
       path: node.frontmatter.path,
       component: path.resolve(
-        `src/templates/${String(node.frontmatter.templateKey)}.js`
+        `src/templates/${node.frontmatter.templateKey}.js`
       ),
     });
   });
