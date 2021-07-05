@@ -114,14 +114,14 @@ section:nth-child(odd) {
 }
 
 .founder-image {
-  margin-bottom: 1rem;
+  margin-bottom: 0.25rem;
   @include mobile {
     margin-left: auto;
     margin-right: auto;
   }
   @include tablet {
     float: left;
-    margin-right: 1rem;
+    margin-right: 2rem;
   }
 }
 
