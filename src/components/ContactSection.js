@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "gatsby";
 
 const ContactSection = () => (
-  <section className="section">
+  <section className="section has-background-grey-lighter">
     <div className="container">
       <div className="columns is-vcentered is-centered px-6">
         <div className="column is-half is-one-third-widescreen has-text-centered-mobile">

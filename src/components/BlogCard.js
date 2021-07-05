@@ -1,7 +1,7 @@
 import React from "react";
 
 const BlogCard = ({ image, name, subtitle, title, updatedAt }) => (
-  <article className="card card-border card-max is-full-height is-flex is-flex-direction-column">
+  <article className="card card-border card-max is-full-height is-flex is-flex-direction-column m-auto">
     <div className="card-image">
       <figure className="image is-3by2">
         <img alt="" src={image} />

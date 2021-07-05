@@ -25,7 +25,7 @@ export const IndexPageTemplate = ({
     <header className="hero is-large has-background-dark is-relative is-clipped">
       <img
         alt=""
-        className="hero-background is-transparent"
+        className="hero-background is-transparent-30"
         src={header.image}
       />
       <div className="hero-body">
@@ -125,7 +125,7 @@ export const IndexPageTemplate = ({
       <div className="container">
         <div className="box has-background-dark">
           <div className="section">
-            <div className="columns is-desktop is-vcentered px-4">
+            <div className="columns is-desktop is-vcentered p-6">
               <div className="column is-two-thirds-desktop is-three-fifths-widescreen">
                 <h3 className="title is-2 has-text-light">{consult.title}</h3>
                 <p className="has-text-light">{consult.subtitle}</p>

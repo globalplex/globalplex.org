@@ -11,7 +11,7 @@ const TestimonialsCard = ({
   const [isActive, setIsActive] = useState(false);
 
   return (
-    <article className="card card-max is-full-height is-flex is-flex-direction-column">
+    <article className="card card-max is-full-height is-flex is-flex-direction-column m-auto">
       <div className="card-image">
         <figure className="image is-4by3">
           <img alt={name} src={image} />

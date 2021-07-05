@@ -2,7 +2,7 @@ import React from "react";
 
 const Header = ({ image, subtitle, title }) => (
   <header className="hero has-background-dark is-relative is-clipped">
-    <img alt="" className="hero-background is-transparent" src={image} />
+    <img alt="" className="hero-background is-transparent-30" src={image} />
     <div className="hero-body">
       <div className="container">
         <div className="columns">

@@ -1,7 +1,7 @@
 import React from "react";
 
 const ValuesCard = ({ image, subtitle, title }) => (
-  <article className="card card-border card-max">
+  <article className="card card-border card-max m-auto">
     <div className="columns is-gapless is-vcentered">
       <div className="column is-three-fifths">
         <div className="card-image">

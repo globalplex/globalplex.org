@@ -57,7 +57,7 @@ export const ServicesPageTemplate = ({ header, content, formats }) => (
       })}
 
     <section>
-      <div className="columns is-desktop is-gapless is-vcentered has-background-dark">
+      <div className="columns is-desktop is-gapless is-vcentered has-background-grey-dark">
         <div className="column is-hidden-touch is-two-fifths-widescreen is-one-third-fullhd">
           <figure className="image is-5by4">
             <img alt="" src={formats.image} />

@@ -70,8 +70,8 @@ section:nth-child(odd) {
   width: 100%;
 }
 
-.is-transparent {
-  opacity: 0.4;
+.is-transparent-30 {
+  opacity: 0.3;
 }
 
 .card-border {
@@ -80,7 +80,6 @@ section:nth-child(odd) {
 
 .card-max {
   @include mobile {
-    margin: auto;
     max-width: 400px;
   }
 }
