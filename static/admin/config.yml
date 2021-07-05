@@ -123,8 +123,15 @@ collections:
             widget: object
             fields:
               - { label: Title, name: title, widget: string }
-              - label: Cards
-                name: cards
+              - label: Top Cards
+                name: topCards
+                widget: list
+                fields:
+                  - { label: Image, name: image, widget: image }
+                  - { label: Title, name: title, widget: string }
+                  - { label: Subtitle, name: subtitle, widget: string }
+              - label: Bottom Cards
+                name: bottomCards
                 widget: list
                 fields:
                   - { label: Image, name: image, widget: image }
