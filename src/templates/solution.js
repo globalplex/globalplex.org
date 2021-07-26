@@ -48,7 +48,9 @@ export const SolutionPageTemplate = ({ header, blurb, topics }) => (
                 className="column is-half is-one-third-desktop"
                 key={item.title}
               >
-                <SolutionCard {...item} />
+                <Link to={`/topics/${getId(item.title)}`}>
+                  <SolutionCard {...item} />
+                </Link>
               </div>
             ))}
         </div>

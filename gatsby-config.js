@@ -20,12 +20,34 @@ module.exports = {
       },
     },
     {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        path: `${__dirname}/src/pages/topics`,
+        name: "pages",
+      },
+    },
+    {
       resolve: "gatsby-source-medium",
       options: {
         username: "globalplex",
       },
     },
-    "gatsby-transformer-remark",
+    {
+      resolve: "gatsby-transformer-remark",
+      options: {
+        plugins: [
+          {
+            resolve: "gatsby-remark-classes",
+            options: {
+              classMap: {
+                "heading[depth=2]": "title has-text-primary",
+                "heading[depth=3]": "title is-4",
+              },
+            },
+          },
+        ],
+      },
+    },
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sass",
     {

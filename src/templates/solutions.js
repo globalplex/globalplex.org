@@ -1,6 +1,6 @@
 import React from "react";
 import { Helmet } from "react-helmet";
-import { graphql } from "gatsby";
+import { graphql, Link } from "gatsby";
 
 import Layout from "../components/Layout";
 import Header from "../components/Header";
@@ -31,7 +31,9 @@ export const SolutionsPageTemplate = ({ header, content }) => (
                     className="column is-one-third-desktop is-2-widescreen"
                     key={card.title}
                   >
-                    <TopicCard idx={idx} {...card} />
+                    <Link to={`/topics/${getId(card.title)}`}>
+                      <TopicCard idx={idx} {...card} />
+                    </Link>
                   </div>
                 ))}
             </div>
