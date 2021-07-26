@@ -11,6 +11,7 @@ import BlogCard from "../components/BlogCard";
 import TestimonialsCard from "../components/TestimonialsCard";
 
 import "../styles/global.scss";
+import { getId } from "../utils/functions";
 
 export const IndexPageTemplate = ({
   header,
@@ -61,7 +62,9 @@ export const IndexPageTemplate = ({
           {services.content &&
             services.content.map((item) => (
               <div key={item.title}>
-                <SolutionsCard {...item} />
+                <Link to={`/solutions/${getId(item.target)}`}>
+                  <SolutionsCard {...item} />
+                </Link>
               </div>
             ))}
         </div>
@@ -174,6 +177,7 @@ export const query = graphql`
           content {
             title
             subtitle
+            target
           }
         }
         approach {

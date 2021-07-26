@@ -4,6 +4,7 @@ import { graphql } from "gatsby";
 
 import Layout from "../components/Layout";
 import Header from "../components/Header";
+import ChevronLink from "../components/ChevronLink";
 import TopicCard from "../components/TopicCard";
 import ContactSection from "../components/ContactSection";
 
@@ -34,6 +35,9 @@ export const SolutionsPageTemplate = ({ header, content }) => (
                   </div>
                 ))}
             </div>
+            <ChevronLink to={`/solutions/${getId(item.target)}`}>
+              Learn more about {item.target}
+            </ChevronLink>
           </div>
         </section>
       ))}

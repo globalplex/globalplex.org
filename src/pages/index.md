@@ -12,14 +12,19 @@ services:
   content:
     - title: Executive Coaching
       subtitle: How to lead and inspire with VISION
+      target: VISION
     - title: Leadership and Management
       subtitle: How to develop as a LEADER
+      target: LEADER
     - title: Integrative Personal Transformation
       subtitle: How to INVEST in your personal development
+      target: INVEST
     - title: Team Development
       subtitle: How to mobilize teams for maximum IMPACT
+      target: IMPACT
     - title: Emerging Professionals
       subtitle: How to accelerate GROWTH in your professional career
+      target: GROWTH
 approach:
   title: Our Approach
   subtitle: Training in multiple settings

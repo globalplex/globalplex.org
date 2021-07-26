@@ -13,6 +13,13 @@ module.exports = {
       },
     },
     {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        path: `${__dirname}/src/pages/solutions`,
+        name: "pages",
+      },
+    },
+    {
       resolve: "gatsby-source-medium",
       options: {
         username: "globalplex",
