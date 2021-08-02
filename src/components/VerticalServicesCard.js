@@ -1,7 +1,7 @@
 import React from "react";
 
 const VerticalServicesCard = ({ image, subtitle, title }) => (
-  <article className="card card-border card-max is-full-height m-auto">
+  <article className="card card-border card-max is-full-height mx-auto">
     <div className="card-image">
       <figure className="image is-2by1">
         <img alt="" src={image} />

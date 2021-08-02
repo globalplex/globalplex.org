@@ -1,7 +1,7 @@
 import React from "react";
 
 const TopicCard = ({ image, title }) => (
-  <article className="card card-border desktop-card-max is-full-height m-auto">
+  <article className="card card-border desktop-card-max is-full-height mx-auto">
     <div className="card-image has-background-dark">
       <figure className="image is-1by1">
         <img alt="" className="is-transparent-80" src={image} />
