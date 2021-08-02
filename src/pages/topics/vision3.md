@@ -10,3 +10,5 @@ topic: Strategic Thinking and Planning
 ---
 
 ## VISION - Strategic Thinking and Planning
+
+This section will be coming soon!

@@ -10,3 +10,5 @@ topic: Organizational Empowerment
 ---
 
 ## VISION - Organizational Empowerment
+
+This section will be coming soon!

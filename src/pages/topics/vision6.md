@@ -10,3 +10,5 @@ topic: Navigating Change
 ---
 
 ## VISION - Navigating Change
+
+This section will be coming soon!

@@ -10,3 +10,5 @@ topic: Increasing Influence
 ---
 
 ## VISION - Increasing Influence
+
+This section will be coming soon!

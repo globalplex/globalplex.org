@@ -10,3 +10,5 @@ topic: Value-Driven Leadership
 ---
 
 ## VISION - Value-Driven Leadership
+
+This section will be coming soon!
