@@ -45,24 +45,24 @@ testimonials:
   title: Testimonials
   subtitle: Join the leaders impacting tomorrow's world
   content:
-    - image: img/testimonials-jackson.png
-      name: Jackson Ye
-      title: Head of Technology and Development
-      subtitle: Upspring Purification Technology Ltd., HK
-      blurb: Methodical and appropriate.
-      description: Entrepreneurship is an area that I was tremendously influenced by. Previously, the fear of failure was always something that held me back from pursuing my dreams. From the training I receivedout making them feeling discouraged. Ultimately, it is his oratory prowess, professional yet with a personal touch, perfected into a sublime concoction, which proves so effective in leading many others, like myself, to achieve our high, I learned to overcome that fear by placing my self-worth on something greater than achievements, circumstances or people. Doing so has liberated me to explore new opportunities and endeavors that I never believe was possible.
-    - image: img/testimonials-young.png
-      name: Young Ro
-      title: Professor and Discipline Lead
-      subtitle: University of Michigan
-      blurb: I have grown into a more effective and influential person as a result.
-      description: The principles and concepts taught by Dr. Seth Kim at Globalplex are enriching and transforming. Over the years, I have applied many of them to different spheres of my life - character development, professional occupation, leadership skills, family life, lay ministry, relationships, education - and I have grown into a more effective and influential person as a result.
-    - image: img/testimonials-charles.png
-      name: Charles Kim
-      title: Associate Professor
-      subtitle: Bucknell University
-      blurb: Success is measured by whom you impact.
-      description: It's difficult for me to overstate the impact that Seth Kim has on my life both professionally and personally. Through my formative years in graduate school, Seth was a mentor, teacher, and friend and through his investment in my life, I grew to be a leader. I believe one of the greatest attributes of a leader is that success is measured by whom you impact. As a professor, sometimes this impact is obscured because our greatest legacy is our students and their imprint on the world. That my role is to serve my students so that they would surpass me almost seems counterintuitive, yet I find that it motivates me to faithfulness and diligence.
+    - image: img/testimonials-nick.png
+      name: Nicholas Chan
+      title: Senior Branch Manager - Wealth Management
+      subtitle: Manulife HK
+      blurb: Seth showed me the importance of 'doing things differently'.
+      description: Seth has always been a great mentor since I started my career as a university graduate, especially when I switched from being a journalist to a wealth management advisor two years ago. It was not easy to be in an industry that I did not study for, which at the same time, was highly competitive. Seth showed me the importance of 'do things differently', which even if I am younger compared to my coworker, I was able to leave memorable impressions to my clients. Also, he always focused on 'the growth mindset' which keeps me motivated for a longer and greater vision instead of short-term achievements.
+    - image: img/testimonials-lydia.png
+      name: Lydia Ng
+      title: Teacher Assistant
+      subtitle: Hong Kong International School
+      blurb: I have also learned to persevere and have grit in the journey to change.
+      description: One of the biggest lessons in the past few years working with Seth was to adopt the growth mindset. While everyone has strengths and weaknesses, I tend to magnify my shortcomings and linger in my failures. Seth, again and again, encourages me to accept my areas of growth and provides me with tangible next steps to see small wins in the process. Have I ever thought of giving up? Yes, I have. Nonetheless, I have also learned to persevere and have grit in the journey to change.
+    - image: img/testimonials-park.png
+      name: Seong W Park
+      title: Senior Engineer
+      subtitle: Hyundai Motors
+      blurb: Stretching oneself towards a goal is the crucible for one's development.
+      description: One Leadership/Character trait that Seth has facilitated in me over the years is being true to who I am and standing firm for what I believe. Stretching oneself towards a goal is the crucible for one's development. Seth enables has helped me learn that lesson through successes and failures by keeping focus of the end goal.
 consult:
   title: Start a free consultation with us now
   subtitle: Schedule a training session with us or see how we can help you and your team reach your full potential
