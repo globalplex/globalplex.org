@@ -28,28 +28,13 @@ values:
     - image: img/about-expand.png
       title: Expanding Your Influence
       subtitle: Our program helps you expand your influence and develop life-long impact within your organization
-founders:
-  title: Our Founders
-  cards:
-    - image: img/about-seth.png
-      title: Seth S. Kim
-      subtitle: Chief Executive Officer
-      description: |-
-        Dr. Kim is a motivational speaker, people developer, leadership educator, and organizational entrepreneur. He loves to help people engineer a vision for their lives so they can make an impact in their sphere of influence.
-        Having started many organizations in the past, he has throughout the years served on various executive boards and continues to hold several key leadership roles. He is passionate about helping others to lead, guide, and expand their organizational impact and influence.
-        Through his 28 years of experience working with people globally, he has conducted training programs for organizations extending to over 30 nations, training and equipping people to live life with purpose, destiny, and influence.
-        Dr. Kim currently holds a B.S. in Psychology and Sociology from the University of Illinois Urbana-Champaign, an M.A. from Trinity International University, and a D.Min from Gordon Conwell Theological Seminary.
-    - image: img/about-joanna.png
-      title: Joanna Jing
-      subtitle: Chief Operating Officer
-      description: |-
-        Joanna has extensive experience in working with people in areas of character development, leadership training, and professionalism. She has mentored hundreds of university students and young adults over the past six years.
-        In addition, she specializes in corporate change management and efficiency transformation. Her experience spans over several corporations such as EY, Citibank, and MetLife.
-        Joanna currently holds a B.S. in Financial Mathematics and Economics from the University of Michigan and an M.Sc. in Operational Research from The Polytechnic University of Hong Kong.
 bottomDividerImage: img/about-divider-2.png
 team:
   title: Our Team
   topCards:
+    - image: img/about-joanna.png
+      title: Joanna Jing
+      subtitle: Chief Operating Officer
     - image: img/about-anne.png
       title: Anne Hu
       subtitle: Education Director
