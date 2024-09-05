@@ -6,6 +6,7 @@ import Layout from "../components/Layout";
 import Header from "../components/Header";
 import Tabs from "../components/Tabs";
 import ValuesCard from "../components/ValuesCard";
+import FoundersCard from "../components/FoundersCard";
 import TeamCard from "../components/TeamCard";
 import ContactSection from "../components/ContactSection";
 
@@ -17,6 +18,7 @@ export const AboutPageTemplate = ({
   story,
   topDividerImage,
   values,
+  founders,
   bottomDividerImage,
   team,
 }) => (
@@ -26,7 +28,7 @@ export const AboutPageTemplate = ({
     </Helmet>
     <Header {...header} />
     <Tabs
-      data={[story, values, team].map((item) => ({
+      data={[story, values, founders, team].map((item) => ({
         target: `/about#${getId(item.title)}`,
         title: item.title,
       }))}
@@ -65,6 +67,16 @@ export const AboutPageTemplate = ({
               ))}
           </div>
         </div>
+      </div>
+    </section>
+
+    <section className="section" id={getId(founders.title)}>
+      <div className="container founders-container">
+        <h2 className="title pb-5">{founders.title}</h2>
+        {founders.cards &&
+          founders.cards.map((item) => (
+            <FoundersCard key={item.title} {...item} />
+          ))}
       </div>
     </section>
 
@@ -129,6 +141,15 @@ export const query = graphql`
             image
             title
             subtitle
+          }
+        }
+        founders {
+          title
+          cards {
+            image
+            title
+            subtitle
+            description
           }
         }
         bottomDividerImage
